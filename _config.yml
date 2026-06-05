@@ -1,8 +1,6 @@
 theme: minima
 title: leakyfaucets
-author:
-  name: Frank Zhang
-  email: zcq@stu.zzu.edu.cn
+author: Frank Zhang
 description: This is my personal website for posting blogs.
 baseurl: ""
 minima:
