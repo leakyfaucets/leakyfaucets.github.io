@@ -1,3 +1,12 @@
 theme: minima
-title: Frank Zhang's homepage
-description: Welcome to my website!
+title: Frank Zhang
+description: This is my personal website for posting blogs.
+baseurl: ""
+minima:
+  skin: auto
+  social_links:
+    - title: GitHub
+      icon: github
+      url: "https://github.com/leakyfaucets"
+  date_format: "%Y-%m-%d"  # 全局日期格式
+  show_excerpts: true      # 首页文章列表是否显示摘要（false 仅显示标题）
