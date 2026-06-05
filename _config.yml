@@ -1,12 +1,17 @@
 theme: minima
-title: Frank Zhang
+title: leakyfaucets
+author:
+  name: Frank Zhang
+  email: zcq@stu.zzu.edu.cn
 description: This is my personal website for posting blogs.
 baseurl: ""
 minima:
   skin: auto
+  nav_pages:
+    - about.md
   social_links:
     - title: GitHub
       icon: github
       url: "https://github.com/leakyfaucets"
-  date_format: "%Y-%m-%d"  # 全局日期格式
-  show_excerpts: true      # 首页文章列表是否显示摘要（false 仅显示标题）
+  show_excerpts: true
+  hide_site_feed_link: true
