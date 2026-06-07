@@ -1,7 +1,7 @@
 theme: minima
 title: leakyfaucets
 author: Frank Zhang
-description: This is my personal website for posting blogs.
+description: Welcome
 github_username: leakyfaucets
 minima:
   date_format: "%Y-%m-%d"
