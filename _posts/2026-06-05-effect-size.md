@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Cohen的d效应量计算方法选择"
-categories: statistics
+categories: [Statistics, Effect size]
 author:
 - Frank Zhang
 comments: true
+modified_date: 2026-06-10
 ---
 
 Abstract
