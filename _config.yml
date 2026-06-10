@@ -9,7 +9,7 @@ minima:
   skin: auto
   nav_pages:
     - about.md
-    - categories.md
+    - categories.html
   date_format: "%Y-%m-%d"
   show_excerpts: true
   social_links:
