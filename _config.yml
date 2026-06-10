@@ -1,8 +1,14 @@
 remote-theme: "jekyll/minima@4de3223"
 title: leakyfaucets
-author: Frank Zhang
+author:
+  name: Frank Zhang
 description: Welcome
-github_username: leakyfaucets
 minima:
+  skin: auto
   date_format: "%Y-%m-%d"
   show_excerpts: true
+  social_links:
+    - title: GitHub profile
+      icon: github
+      url: "https://github.com/leakyfaucets"
+  hide_site_feed_link: true
