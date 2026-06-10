@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cohen的d效应量计算方法选择"
-categries: statistics
+categories: statistics
 author:
 - Frank Zhang
 comments: true
