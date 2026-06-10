@@ -1,4 +1,4 @@
-remote-theme: "jekyll/minima@4de3223"
+remote_theme: "jekyll/minima@4de3223"
 title: leakyfaucets
 author:
   name: Frank Zhang
