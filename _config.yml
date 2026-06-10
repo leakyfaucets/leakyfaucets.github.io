@@ -7,6 +7,8 @@ description: >
   It serves as a platform for sharing knowledge, insights, and experiences.
 minima:
   skin: auto
+  nav_pages:
+    - about.md
   date_format: "%Y-%m-%d"
   show_excerpts: true
   social_links:
