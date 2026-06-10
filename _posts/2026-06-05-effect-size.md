@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cohen的d效应量计算方法选择"
+title: "Cohen的d计算方法选择"
 categories: [Statistics, Effect size]
 author:
 - Frank Zhang
@@ -10,18 +10,18 @@ modified_date: 2026-06-10
 
 Abstract
 
-<!--more-->
+## 介绍
 
-# 介绍
+Introduction
 
-Cohen的d
+## 不同计算方法
 
-# 不同计算方法
+Methods
 
-有多种计算方法
+## 计算方法选择
 
-# 计算方法选择
+Choice
 
-111
+## 总结
 
-# 总结
+Conclusion
