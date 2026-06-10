@@ -2,7 +2,9 @@ remote-theme: "jekyll/minima@4de3223"
 title: leakyfaucets
 author:
   name: Frank Zhang
-description: Welcome
+description: >
+  leakyfaucets is a website about programming, statistics, and other topics of interest to the author. 
+  It serves as a platform for sharing knowledge, insights, and experiences.
 minima:
   skin: auto
   date_format: "%Y-%m-%d"
