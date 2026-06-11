@@ -18,17 +18,17 @@ modified_date: 2026-06-11
 
 1. 创建名为`<username>.github.io`的公开仓库，其中`<username>`为你的`Github`用户名。
 2. 在仓库根目录创建`_config.yml`文件，内容为：
-```
-remote_theme: "jekyll/minima@4de3223"
-title: Your awesome title
-```
+   ```
+   remote_theme: "jekyll/minima@4de3223"
+   title: Your awesome title
+   ```
 3. 在仓库根目录创建`index.md`文件，内容为：
-```
----
-layout: home
-title: Home
----
-```
+   ```
+   ---
+   layout: home
+   title: Home
+   ---
+   ```
 4. 保存上述文件并提交，约一分钟后访问`https://<username>.github.io`即可查看网站，其中`<username>`为你的`Github`用户名。
 
 ## 步骤说明
