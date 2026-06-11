@@ -106,7 +106,7 @@ This is an example.
 我这里使用的是`giscus`。我曾尝试了`gitalk`，但它会在前端暴露`GitHub Application Client`密码，且长时间无人维护，因此不太推荐。
 
 首先需要在仓库的设置-General-Features中打开`Discussion`功能，然后安装[giscus app](https://github.com/apps/giscus)。访问[`giscus`主页](https://giscus.app/zh-CN)，根据页面提示填写仓库名。映射关系建议选择“Discussion的标题包含页面的`pathname`”，因为文章的`pathname`具有全局唯一性且永久不变。同时建议使用严格的标题匹配，以避免评论串台。选择好其他特性后页面会生成对应参数，如下面的例子：
-```
+```html
 <script src="https://giscus.app/client.js"
         data-repo="[repo_name]"
         data-repo-id="[repo_id]"
