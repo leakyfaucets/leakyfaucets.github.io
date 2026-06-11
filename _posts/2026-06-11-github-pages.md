@@ -5,7 +5,7 @@ categories: [Website]
 author:
 - Frank Zhang
 comments: true
-# modified_date: 2026-06-11
+modified_date: 2026-06-11
 ---
 
 本文通过预设主题实现了以最少的文件来创建`Github`页面，同时给出了进一步定制页面和添加其他功能的方法，适合想从0开始搭建自己`Github`页面的新手用户。
@@ -29,7 +29,7 @@ layout: home
 title: Home
 ---
 ```
-4. 保存上述文件并提交，约一分钟后访问`https://github.com/<username>/<username>.github.io`即可查看网站，其中`<username>`为你的`Github`用户名。
+4. 保存上述文件并提交，约一分钟后访问`https://<username>.github.io`即可查看网站，其中`<username>`为你的`Github`用户名。
 
 ## 步骤说明
 
