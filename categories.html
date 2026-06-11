@@ -4,11 +4,6 @@ title: Categories
 permalink: /categories/
 ---
 
-{% comment %} 
-  对分类名称进行字母排序，使展示更有序。
-  site.categories 是一个哈希表，遍历时 category[0] 为分类名，category[1] 为文章数组。
-{% endcomment %}
-
 {% assign sorted_categories = site.categories | sort %}
 
 {% for category in sorted_categories %}
