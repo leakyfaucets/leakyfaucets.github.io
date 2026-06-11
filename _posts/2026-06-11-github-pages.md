@@ -5,7 +5,7 @@ categories: [Website]
 author:
 - Frank Zhang
 comments: true
-modified_date: 2026-06-10
+# modified_date: 2026-06-11
 ---
 
 本文通过预设主题实现了以最少的文件来创建`Github`页面，同时给出了进一步定制页面和添加其他功能的方法，适合想从0开始搭建自己`Github`页面的新手用户。
@@ -99,7 +99,7 @@ Excerpt
 
 This is an example.
 ```
-其中，`layout`指定了文章的布局为`post`，`title`为文章的标题，这两个是必需的。`categories`是对文章的分类，`author`可添加多个作者。`comments`控制了评论功能的开关，默认为`true`。`modified_date`如果与文章文件名中的日期不同，那么便会显示该日期为更新时间（Updated）。第二个`---`后面便是文章的正文了，同样遵循`markdown`语法。`minima`主题会将文章显示在首页，默认首行内容为文章的节选，如果设置了`show_excerpts: true`，会随文章一同展示在首页。
+其中，`layout`指定了文章的布局为`post`，`title`为文章的标题，这两个是必需的。`categories`是对文章的分类，`author`可添加多个作者。`comments`控制了评论功能的开关，默认为`true`。`modified_date`会增加一个更新时间（Updated）。第二个`---`后面便是文章的正文了，同样遵循`markdown`语法。`minima`主题会将文章显示在首页，默认首行内容为文章的节选，如果设置了`show_excerpts: true`，会随文章一同展示在首页。
 
 ## 添加评论功能
 
