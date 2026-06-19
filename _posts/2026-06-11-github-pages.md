@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Github Pages最小创建指南"
-categories: [Website]
+categories: [Web]
 author:
 - Frank Zhang
 comments: true
-modified_date: 2026-06-11
+# modified_date: 2026-06-11
 ---
 
 本文通过预设主题实现了以最少的文件来创建`Github`页面，同时给出了进一步定制页面和添加其他功能的方法，适合想从0开始搭建自己`Github`页面的新手用户。
