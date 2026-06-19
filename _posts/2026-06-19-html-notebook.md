@@ -38,6 +38,12 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 <p><a href="https://www.example.com" title="A link to &quot;example&quot;.">This is an example.</a></p>
 ```
 
+
+<p><a href="https://www.example.com" title='A link to "example".'>This is an example.</a></p>
+<p><a href="https://www.example.com" title="A link to &quot;example&quot;.">This is an example.</a></p>
+
+
+
 布尔属性（boolean attribute）是表示`true`或`false`值的属性。如果HTML标签包含布尔属性，无论该属性的值如何，该属性都会在该元素上设置为`true`。如果HTML标签不包含该属性，则该属性被设置为`false`。以布尔属性`checked`为例：
 
 
@@ -49,6 +55,16 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 <!-- 以下复选框在初始渲染时将不被选中 -->
 <input type="checkbox" />
 ```
+
+
+<!-- 以下复选框在初始渲染时将被选中 -->
+<input type="checkbox" checked />
+<input type="checkbox" checked="" />
+<input type="checkbox" checked="checked" />
+<!-- 以下复选框在初始渲染时将不被选中 -->
+<input type="checkbox" />
+
+
 
 **注意**：要将属性设置为`false`，则该属性不应出现在元素标签中。尽管现代浏览器将任何字符串值视为`true`，但也不应该把值设为`true`。
 
@@ -104,6 +120,16 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 </ul>
 ```
 
+
+<ul>
+  <li>豆浆</li>
+  <li>油条</li>
+  <li>豆汁</li>
+  <li>焦圈</li>
+</ul>
+
+
+
 #### 有序列表
 
 有序列表使用`<ol>`（ordered list）元素。
@@ -118,6 +144,17 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
   <li>继续走 300 米，学校就在你的右手边</li>
 </ol>
 ```
+
+
+<ol>
+  <li>沿这条路走到头</li>
+  <li>右转</li>
+  <li>直行穿过第一个十字路口</li>
+  <li>在第三个十字路口处左转</li>
+  <li>继续走 300 米，学校就在你的右手边</li>
+</ol>
+
+
 
 #### 描述列表
 
@@ -135,6 +172,19 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
   </dd>
 </dl>
 ```
+
+
+<dl>
+  <dt>旁白</dt>
+  <dd>
+    戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
+  </dd>
+  <dd>
+    写作中，指与当前主题相关的一段内容，通常不适于直接置于内容主线中，因此置于附近的其他位置（通常位于主线内容旁边一个文本框内）。
+  </dd>
+</dl>
+
+
 
 ### 表格
 
@@ -234,6 +284,85 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 </table>
 ```
 
+
+<table>
+  <caption>2016年8月出售的物品</caption>
+  <colgroup span="2" class="row header"></colgroup>
+  <colgroup span="3" class="clothing"></colgroup>
+  <colgroup span="2" class="jewelry"></colgroup>
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th colspan="3" scope="colgroup">衣物</th>
+      <th colspan="2" scope="colgroup">饰品</th>
+    </tr>
+    <tr>
+      <th colspan="2"></th>
+      <th scope="col">长裤</th>
+      <th scope="col">衬衫</th>
+      <th scope="col">裙子</th>
+      <th scope="col">手镯</th>
+      <th scope="col">戒指</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" scope="rowgroup">比利时</th>
+      <th scope="row">安特卫普</th>
+      <td>56</td>
+      <td>22</td>
+      <td>43</td>
+      <td>72</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th scope="row">根特</th>
+      <td>46</td>
+      <td>18</td>
+      <td>50</td>
+      <td>61</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th scope="row">布鲁塞尔</th>
+      <td>51</td>
+      <td>27</td>
+      <td>38</td>
+      <td>69</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th rowspan="2" scope="rowgroup">荷兰</th>
+      <th scope="row">阿姆斯特丹</th>
+      <td>89</td>
+      <td>34</td>
+      <td>69</td>
+      <td>85</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <th scope="row">乌特勒支</th>
+      <td>80</td>
+      <td>12</td>
+      <td>43</td>
+      <td>36</td>
+      <td>19</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="2" scope="row">总计</th>
+      <td>200</td>
+      <td>200</td>
+      <td>200</td>
+      <td>200</td>
+      <td>200</td>
+    </tr>
+  </tfoot>
+</table>
+
+
+
 ### 图片
 
 图片通过`<img>`元素嵌入。有两个属性是必须的：`src`属性：一个指向要嵌入页面的图像的URL；`alt`属性：图片无法显示的情况下会显示该属性的值。可以用`width`和`height`属性来指定图片的宽度和高度。它们的值是不带单位的整数，以像素为单位。如果指定了图片的实际大小，那么在下载图片之前，浏览器就知道需要为其留出多少空间。当图片下载完成时，浏览器就不需要移动周围的内容。
@@ -254,7 +383,7 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 ```html
 <p>
   <img
-    src="https://leakyfaucets.github.io/assets\images\avatar_FZ_32x32.png"
+    src="https://leakyfaucets.github.io/assets/images/avatar_FZ_32x32.png"
     alt="An avatar with two letters 'FZ' on it."
     width="32"
   />
@@ -268,6 +397,24 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 </p>
 
 ```
+
+
+<p>
+  <img
+    src="https://leakyfaucets.github.io/assets/images/avatar_FZ_32x32.png"
+    alt="An avatar with two letters 'FZ' on it."
+    width="32"
+  />
+</p>
+<p>
+  <img
+    src="avatar_FZ_32x32.png"
+    alt="An avatar with two letters 'FZ' on it."
+    width="32"
+  />
+</p>
+
+
 
 #### 为图片添加标题
 
@@ -285,6 +432,18 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 </figure>
 ```
 
+
+<figure>
+  <img
+    src="https://leakyfaucets.github.io/assets/images/avatar_FZ_32x32.png"
+    alt="My avatar with two letters 'FZ' on it."
+    width="32"
+  />
+  <figcaption>FZ Avatar</figcaption>
+</figure>
+
+
+
 #### 添加矢量图
 
 可以通过`<img>`元素嵌入矢量图，也可以通过`<svg>`元素引入SVG代码。
@@ -292,7 +451,7 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 
 ```html
 <p>
-  <img src="../assets/images/example.svg" alt="Example Image" height="100" width="100" />
+  <img src="https://leakyfaucets.github.io/assets/images/example.svg" alt="Example Image" height="100" width="100" />
 </p>
 <p>
   <svg width="100" height="100">
@@ -300,6 +459,18 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
   </svg>
 </p>
 ```
+
+
+<p>
+  <img src="https://leakyfaucets.github.io/assets/images/example.svg" alt="Example Image" height="100" width="100" />
+</p>
+<p>
+  <svg width="100" height="100">
+    <rect width="100%" height="100%" fill="green" />
+  </svg>
+</p>
+
+
 
 ### 视频和音频
 
@@ -311,10 +482,19 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 ```html
 <video src="https://leakyfaucets.github.io/assets/videos/rabbit320.mp4" controls>
   <p>
-    你的浏览器不支持 HTML 视频。可点击<a href="rabbit320.mp4">此链接</a>观看。
+    你的浏览器不支持 HTML 视频。可点击<a href="https://leakyfaucets.github.io/assets/videos/rabbit320.mp4">此链接</a>观看。
   </p>
 </video>
 ```
+
+
+<video src="https://leakyfaucets.github.io/assets/videos/rabbit320.mp4" controls>
+  <p>
+    你的浏览器不支持 HTML 视频。可点击<a href="https://leakyfaucets.github.io/assets/videos/rabbit320.mp4">此链接</a>观看。
+  </p>
+</video>
+
+
 
 其中，应当使用`controls`属性来让视频或音频包含浏览器自带的控制界面。`<video>`元素的内容叫做后备内容，当浏览器不支持该元素时，就会显示这段内容，借此对旧的浏览器提供回退。
 
@@ -324,12 +504,21 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 
 
 ```html
-<video controls poster="https://leakyfaucets.github.io/assets\images\poster.png" preload="metadata">
-  <source src="https://leakyfaucets.github.io/assets\videos\rabbit320.mp4" type="video/mp4" />
-  <source src="https://leakyfaucets.github.io/assets\videos\rabbit320.webm" type="video/webm" />
-  <p>你的浏览器不支持此视频。可点击<a href="https://leakyfaucets.github.io/assets\videos\rabbit320.mp4">此链接</a>观看</p>
+<video controls poster="https://leakyfaucets.github.io/assets/images/poster.png" preload="metadata">
+  <source src="https://leakyfaucets.github.io/assets/videos/rabbit320.mp4" type="video/mp4" />
+  <source src="https://leakyfaucets.github.io/assets/videos/rabbit320.webm" type="video/webm" />
+  <p>你的浏览器不支持此视频。可点击<a href="https://leakyfaucets.github.io/assets/videos/rabbit320.mp4">此链接</a>观看</p>
 </video>
 ```
+
+
+<video controls poster="https://leakyfaucets.github.io/assets/images/poster.png" preload="metadata">
+  <source src="https://leakyfaucets.github.io/assets/videos/rabbit320.mp4" type="video/mp4" />
+  <source src="https://leakyfaucets.github.io/assets/videos/rabbit320.webm" type="video/webm" />
+  <p>你的浏览器不支持此视频。可点击<a href="https://leakyfaucets.github.io/assets/videos/rabbit320.mp4">此链接</a>观看</p>
+</video>
+
+
 
 其他属性：
 - `poster`属性指向了一个图像的URL，这个图像会在视频播放前显示。
@@ -346,11 +535,20 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 
 ```html
 <audio controls>
-  <source src="https://leakyfaucets.github.io/assets\audios\viper.mp3" type="audio/mp3" />
-  <source src="https://leakyfaucets.github.io/assets\audios\viper.ogg" type="audio/ogg" />
-  <p>你的浏览器不支持该音频，可点击<a href="https://leakyfaucets.github.io/assets\audios\viper.mp3">此链接</a>收听。</p>
+  <source src="https://leakyfaucets.github.io/assets/audios/viper.mp3" type="audio/mp3" />
+  <source src="https://leakyfaucets.github.io/assets/audios/viper.ogg" type="audio/ogg" />
+  <p>你的浏览器不支持该音频，可点击<a href="https://leakyfaucets.github.io/assets/audios/viper.mp3">此链接</a>收听。</p>
 </audio>
 ```
+
+
+<audio controls>
+  <source src="https://leakyfaucets.github.io/assets/audios/viper.mp3" type="audio/mp3" />
+  <source src="https://leakyfaucets.github.io/assets/audios/viper.ogg" type="audio/ogg" />
+  <p>你的浏览器不支持该音频，可点击<a href="https://leakyfaucets.github.io/assets/audios/viper.mp3">此链接</a>收听。</p>
+</audio>
+
+
 
 #### 为媒体元素添加字幕
 
@@ -368,11 +566,20 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 
 ```html
 <video controls>
-  <source src="../assets/videos/rabbit320.mp4" type="video/mp4" />
-  <source src="../assets/videos/rabbit320.webm" type="video/webm" />
-  <track kind="subtitles" src="../assets/vtt/test.vtt" srclang="zh" label="Chinese" />
+  <source src="https://leakyfaucets.github.io/assets/videos/rabbit320.mp4" type="video/mp4" />
+  <source src="https://leakyfaucets.github.io/assets/videos/rabbit320.webm" type="video/webm" />
+  <track kind="subtitles" src="https://leakyfaucets.github.io/assets/vtt/test.vtt" srclang="zh" label="Chinese" />
 </video>
 ```
+
+
+<video controls>
+  <source src="https://leakyfaucets.github.io/assets/videos/rabbit320.mp4" type="video/mp4" />
+  <source src="https://leakyfaucets.github.io/assets/videos/rabbit320.webm" type="video/webm" />
+  <track kind="subtitles" src="https://leakyfaucets.github.io/assets/vtt/test.vtt" srclang="zh" label="Chinese" />
+</video>
+
+
 
 ### 表单
 
@@ -486,6 +693,75 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
     </form>
 ```
 
+
+<form action="./payment_page" method="get">
+  <h2>报名参见见面会</h2>
+  <fieldset>
+    <legend>填写个人信息</legend>
+    <p>
+      <label for="name">姓名：</label>
+      <input type="text" name="name" id="name" required />
+    </p>
+    <p>
+      <label for="email">邮箱：</label>
+      <input type="email" name="email" id="email" required />
+    </p>
+  </fieldset>
+  <fieldset>
+    <legend>选择酒店房型：</legend>
+    <div>
+      <input
+        type="radio"
+        id="hotelChoice1"
+        name="hotel"
+        value="economy"
+        checked />
+      <label for="hotelChoice1">经济型（+$0）</label>
+      <input type="radio" id="hotelChoice2" name="hotel" value="superior" />
+      <label for="hotelChoice2">高级型（+$50）</label>
+      <input
+        type="radio"
+        id="hotelChoice3"
+        name="hotel"
+        value="penthouse"
+        disabled />
+      <label for="hotelChoice3">顶级套房（+$150）</label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>要参加的课程：</legend>
+    <div>
+      <input type="checkbox" id="yoga" name="yoga" />
+      <label for="yoga">瑜伽（+$10）</label>
+      <input type="checkbox" id="coffee" name="coffee" />
+      <label for="coffee">咖啡烘焙（+$20）</label>
+      <input type="checkbox" id="balloon" name="balloon" />
+      <label for="balloon">气球动物艺术（+$5）</label>
+    </div>
+  </fieldset>
+  <p>
+    <label for="transport">出行方式：</label>
+    <select name="transport" id="transport">
+      <option value="">--请选择一项--</option>
+      <option value="plane">乘坐飞机</option>
+      <option value="bike">骑自行车</option>
+      <option value="walk">徒步</option>
+      <option value="bus">乘坐公交</option>
+      <option value="train">搭乘火车</option>
+      <option value="jetPack" selected>使用喷气背包</option>
+    </select>
+  </p>
+  <p>
+    <label for="comments">其他备注：</label>
+    <textarea id="comments" name="comments" rows="5" cols="33"></textarea>
+  </p>
+  <p>
+    <button>提交</button>
+  </p>
+</form>
+
+
+
 ### 嵌入其他网页
 
 可以通过`<iframe>`元素将其他页面嵌入到当前页面中，其属性包括：
@@ -499,13 +775,13 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 
 
 ```html
-<iframe
-  src="//player.bilibili.com/player.html?isOutside=true&aid=70594669&bvid=BV1gE411f7gw&cid=122468020&p=1"
-  border="0"
-  sandbox
-  allow="fullscreen"
-></iframe>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=70594669&bvid=BV1gE411f7gw&cid=122468020&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 ```
+
+
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=70594669&bvid=BV1gE411f7gw&cid=122468020&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+
 
 ### 嵌入外部资源
 
@@ -518,12 +794,21 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
 
 
 ```html
-<object data="../assets/files/mypdf.pdf" type="application/pdf" width="800" height="1200">
+<object data="https://leakyfaucets.github.io/assets/files/mypdf.pdf" type="application/pdf" width="800" height="1200">
   <p>
     You don't have a PDF plugin, but you can <a href="my-pdf.pdf">download the PDF file. </a>
   </p>
 </object>
 ```
+
+
+<object data="https://leakyfaucets.github.io/assets/files/mypdf.pdf" type="application/pdf" width="800" height="1200">
+  <p>
+    You don't have a PDF plugin, but you can <a href="https://leakyfaucets.github.io/assets/files/mypdf.pdf">download the PDF file. </a>
+  </p>
+</object>
+
+
 
 ## 文档结构
 
@@ -537,7 +822,7 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
     <meta charset="utf-8" />
     <meta name="author" content="Chris Mills" />
     <meta name="description" content="This is an description." />
-    <link rel="icon" href="../assets/images/avatar_FZ_32x32.png" />
+    <link rel="icon" href="https://leakyfaucets.github.io/assets/images/avatar_FZ_32x32.png" />
     <title>我的测试页面</title>
   </head>
   <body>
@@ -545,6 +830,23 @@ HTML（HyperText Markup Language，超文本标记语言）文档由一系列的
   </body>
 </html>
 ```
+
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Chris Mills" />
+    <meta name="description" content="This is an description." />
+    <link rel="icon" href="https://leakyfaucets.github.io/assets/images/avatar_FZ_32x32.png" />
+    <title>我的测试页面</title>
+  </head>
+  <body>
+    <p>这是我的页面</p>
+  </body>
+</html>
+
+
 
 其中有：
 - `<!doctype html>`：文档类型声明。目前已经成为历史遗留物，只是为了让其他一切正常工作而必须包含它。
@@ -569,6 +871,14 @@ HTML规范不强制要求对嵌套元素进行缩进。浏览器在解析HTML文
     呆
         萌。</p>
 ```
+
+
+<p id="noWhitespace">狗狗很 呆 萌。</p>
+<p id="whitespace">狗狗很
+    呆
+        萌。</p>
+
+
 
 但为了保障代码的可维护性与专业性，强烈建议在所有常规开发场景中遵循统一的缩进规范（通常为2个空格）。
 
@@ -613,12 +923,26 @@ JavaScript代码通过`<script>`元素应用，也应当放在文档的头部，
 </p>
 ```
 
+
+<p>
+  要提供意见和建议，请将信件邮寄至<a href="https://leakyfaucets.github.io/index.md#Welcome to leakyfaucets"
+    >我们的地址</a
+  >。
+</p>
+
+
+
 也可以链接到当前文档的另一部分：
 
 
 ```html
 <p>本页面底部可以找到<a href="#引用">公司邮寄地址</a>。</p>
 ```
+
+
+<p>本页面底部可以找到<a href="#引用">公司邮寄地址</a>。</p>
+
+
 
 当链接到要下载的资源而不是在浏览器中打开时，可以使用`download`属性来提供一个默认的保存文件名。下面是一个Firefox的Windows最新版本下载链接的示例：
 
@@ -630,6 +954,15 @@ JavaScript代码通过`<script>`元素应用，也应当放在文档的头部，
   下载最新的 Firefox 中文版 - Windows（64 位）
 </a>
 ```
+
+
+<a
+  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN"
+  download="firefox-latest-64bit-installer.exe">
+  下载最新的 Firefox 中文版 - Windows（64 位）
+</a>
+
+
 
 ### 引用
 
@@ -652,6 +985,19 @@ JavaScript代码通过`<script>`元素应用，也应当放在文档的头部，
 </blockquote>
 ```
 
+
+<p>这是块引用：</p>
+<blockquote
+  cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
+  <p>
+    <strong>HTML <code>&lt;blockquote&gt;</code> 元素</strong>（或<em
+      >HTML 块级引用元素</em
+    >）表示所附文本为扩展引用。
+  </p>
+</blockquote>
+
+
+
 #### 行内引用元素\<q\>
 
 浏览器的默认样式会在行内引用元素的两边添加双引号。
@@ -666,6 +1012,16 @@ JavaScript代码通过`<script>`元素应用，也应当放在文档的头部，
 </p>
 ```
 
+
+<p>
+  引用元素 <code>&lt;q&gt;</code> 是<q
+    cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"
+    >用于不需要段落分隔的短引用。</q
+  >
+</p>
+
+
+
 ### 引文元素\<cite\>
 
 浏览器的默认样式会将引文元素的文本渲染为**斜体**。
@@ -678,6 +1034,13 @@ JavaScript代码通过`<script>`元素应用，也应当放在文档的头部，
   根据<a href="/zh-CN/docs/Web/HTML/Element/blockquote"><cite>MDN 块引用页</cite></a>：
 </p>
 ```
+
+
+<p>
+  根据<a href="/zh-CN/docs/Web/HTML/Element/blockquote"><cite>MDN 块引用页</cite></a>：
+</p>
+
+
 
 ### 缩写元素\<abbr\>
 
@@ -692,6 +1055,15 @@ JavaScript代码通过`<script>`元素应用，也应当放在文档的头部，
 </p>
 ```
 
+
+<p>我们使用<abbr>HTML</abbr>超文本标记语言来组织网页文档。</p>
+<p>
+  第 33 届<abbr title="夏季奥林匹克运动会">奥运会</abbr>已于 2024 年 7
+  月在法国巴黎举行。
+</p>
+
+
+
 ### 联系人地址元素\<address\>
 
 浏览器默认将其中的文本渲染为斜体。
@@ -700,6 +1072,11 @@ JavaScript代码通过`<script>`元素应用，也应当放在文档的头部，
 ```html
 <address>Chris Mills, Manchester, The Grim North, UK</address>
 ```
+
+
+<address>Chris Mills, Manchester, The Grim North, UK</address>
+
+
 
 
 ### 上标和下标元素\<sup\>and\<sub\>
@@ -712,6 +1089,15 @@ JavaScript代码通过`<script>`元素应用，也应当放在文档的头部，
 </p>
 <p>如果 x<sup>2</sup> 的值为 9，那么 x 的值必为 3 或 -3。</p>
 ```
+
+
+<p>我的生日是在 2021 年 5 月 25 日（译者注：英文原文为 25<sup>th</sup>）</p>
+<p>
+  咖啡因的化学方程式是 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>。
+</p>
+<p>如果 x<sup>2</sup> 的值为 9，那么 x 的值必为 3 或 -3。</p>
+
+
 
 ### 代码相关元素
 
@@ -743,6 +1129,28 @@ para.onclick = function() {
 64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
 ```
 
+
+<pre><code>const para = document.querySelector('p');
+
+para.onclick = function() {
+  alert('噢，噢，噢，别点我了。');
+}</code></pre>
+
+<p>
+  请不要使用 <code>&lt;font&gt;</code> 、
+  <code>&lt;center&gt;</code> 等表现元素。
+</p>
+
+<p>在上述的 JavaScript 示例中，<var>para</var> 表示一个段落元素。</p>
+
+<p>按 <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd> 选择全部内容。</p>
+
+<pre>$ <kbd>ping mozilla.org</kbd>
+<samp>PING mozilla.org (63.245.215.20): 56 data bytes
+64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+
+
+
 ### 时间元素\<time\>
 
 时间元素用来表示一个特定的时间段。该元素可包含`datetime`属性，用于将日期转换为机器可读格式，从而获得更好的搜索引擎结果或自定义功能（如提醒）。
@@ -752,3 +1160,9 @@ para.onclick = function() {
 
 <time datetime="2016-01-20">2016年1月20日</time>
 ```
+
+
+
+<time datetime="2016-01-20">2016年1月20日</time>
+
+
