@@ -147,13 +147,44 @@ $$
 	2. 若行列式有两行/列的元素对应成比例，则此行列式值为零。
 4. 若行列式的某一行/列的各元素都是两个数之和，则此行列式等于两个行列式之和，这两个行列式分别以这两个数之一作为所在行/列对应位置的元素，**其他位置的元素与原行列式相同**。如$\begin{vmatrix}1+2&2+3\\a&b\end{vmatrix}=\begin{vmatrix}1&2\\a&b\end{vmatrix}+\begin{vmatrix}2&3\\a&b\end{vmatrix}$
 5. 将行列式的某一行/列的所有元素乘以同一数$k$后加到另一行/列对应位置的元素上，则行列式的值不变。利用性质4和推论3.2即可证明。
-6. 
+### 行列式按行/列展开
 
-总结：
-1. 行列式的值为0$\Rightarrow$某一行元素均为0或两行/列相等或两行/列成比例。
+余子式：在$n(n>1)$阶行列式$D=|a_{ij}|$中，除元素$a_{ij}$所在行和列的所有元素以外的元素所构成的$n-1$阶行列式称为$D$中元素$a_{ij}$的余子式，记为$M_{ij}$，把$(-1)^{i+j}M_{ij}$称为元素$a_{ij}$的代数余子式，记为$A_{ij}$。
+
+行列式按一行/列展开：$n$阶行列式$D=|a_{ij}|$等于它的任意一行/列的各元素与其对应的代数余子式乘积的和，即$$D=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots+a_{in}A_{in}(i=1,2,\cdots,n)$$（按第$i$行展开）。为了计算简便，一般优先按0多的行/列展开。如果没有，可以利用上一部分的性质5构造尽可能多的0。
+
+异乘变零定理：$n$阶行列式$D=|a_{ij}|$的某一行/列的所有元素与另一行/列中对应元素的代数余子式乘积的和等于零，即$$a_{i1}A_{k1}+a_{i2}A_{k2}+\cdots+a_{in}A_{kn}=0,i\neq k$$
+例题：设行列式$D=\begin{vmatrix}3&0&4&0\\3&2&2&2\\0&-7&0&0\\5&3&-2&2\end{vmatrix}$，求：（1）$A_{41}+A_{42}+A_{43}+A_{44}$；（2）$M_{41}+M_{42}+M_{43}+M_{44}$。
+
+解：（1）$A_{41}+A_{42}+A_{43}+A_{44}=\begin{vmatrix}3&0&4&0\\3&2&2&2\\0&-7&0&0\\1&1&1&1\end{vmatrix}=(-7)\times(-1)^{3+2}\times\begin{vmatrix}3&4&0\\3&2&2\\1&1&1\end{vmatrix}=7\times\begin{vmatrix}3&4&0\\1&0&0\\1&1&1\end{vmatrix}=7\times(-1)^{3}\times\begin{vmatrix}4&0\\1&1\end{vmatrix}=-28$
+（2）$M_{41}+M_{42}+M_{43}+M_{44}=-A_{41}+A_{42}-A_{43}+A_{44}=\begin{vmatrix}3&0&4&0\\3&2&2&2\\0&-7&0&0\\-1&1&-1&1\end{vmatrix}=\dots=-56$
+
+$k$阶子式的余子式和代数余子式：在$n$阶行列式$D$中，任意选取$k$行和$k$列（$1\leq k\leq n$），位于这些行列交叉点处的$k^2$个元素，按照原来的相对位置所构成的$k$阶行列式$N$为$D$的一个$k$阶子式。在这些行列之外的元素，按照原来的相对位置所构成的$n-k$阶行列式$M$为$N$的余子式。$N$的代数余子式的正负性由所有行号和列号之和决定。
+
+行列式按多行/列展开（拉普拉斯定理，Laplace theorem）：在$n$阶行列式$D$中，任意取定$k$行/列，则由这$k$行/列元素所能构成的所有$k$阶子式$N_1,N_2,\cdots,N_t(t=C_n^k)$与它们的对应代数余子式$A_1,A_2,\cdots,A_t$乘积之和等于行列式$D$的值，即$$D=N_1A_1+N_2A_2+\cdots+N_tA_t$$
+
+推论：
+$\begin{vmatrix}A&\mathbf{0}\\\mathbf{0}&B\end{vmatrix}=\begin{vmatrix}A&\mathbf{0}\\C&B\end{vmatrix}=\begin{vmatrix}A&C\\\mathbf{0}&B\end{vmatrix}=|A|\times|B|$，$\begin{vmatrix}\mathbf{0}&A\\B&\mathbf{0}\end{vmatrix}=\begin{vmatrix}\mathbf{0}&A\\B&C\end{vmatrix}=\begin{vmatrix}C&A\\B&\mathbf{0}\end{vmatrix}=(-1)^{mn}|A|\times|B|$，其中$A$的阶数为$m$，$B$的阶数为$n$。注意与三角形行列式中对角线与正负号的关系不同。
+
+证明：
+对于$\begin{vmatrix}A&\mathbf{0}\\C&B\end{vmatrix}$，其中$A$的阶数为$m$，$B$的阶数为$n$。根据拉普拉斯定理取前$m$行，则必须取$m$列。只有当取前$m$列时，子式才不会有元素全为0的列，因此有$\begin{vmatrix}A&\mathbf{0}\\C&B\end{vmatrix}=|A|\times(-1)^{2(1+2+3+\cdots+m)}|B|=|A|\times|B|$。
+对于$\begin{vmatrix}\mathbf{0}&A\\B&C\end{vmatrix}$，其中$A$的阶数为$m$，$B$的阶数为$n$。根据拉普拉斯定理取前$m$行，则必须取$m$列。只有当取后$m$列时，子式才不会有元素全为0的列，因此有$\begin{vmatrix}\mathbf{0}&A\\B&C\end{vmatrix}=|A|\times(-1)^{1+2+\cdots+m+n+1+n+2+\cdots+n+m}|B|=(-1)^{mn}|A|\cdot|B|$。
+
+行列式的乘法：
+$\begin{vmatrix}1&2&3\\1&1&0\\0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\1&2&3\\1&1&-6\end{vmatrix}=\begin{vmatrix}1\times0+2\times1+3\times1&1\times1+2\times2+3\times1&1\times1+2\times3+3\times(-6)\\1\times0+1\times1+0\times1&1\times1+1\times2+0\times1&1\times1+1\times3+0\times(-6)\\\cdots&\cdots&\cdots\end{vmatrix}$
+### 克莱姆法则 Cramer Rule
+
+克莱姆法则：对于含有$n$个方程和$n$个未知数的$n$元线性方程组$\begin{cases}a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n=b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n=b_2\\\cdots\\a_{n1}x_1+a_{n2}x_2+\cdots+a_{nn}x_n=b_n\end{cases}$，当其系数行列式$D=\begin{vmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{n1}&a_{n2}&\cdots&a_{nn}\end{vmatrix}\neq0$时，方程组有唯一解$x_1=\frac{D_1}{D},x_2=\frac{D_2}{D},\cdots,x_n=\frac{D_n}{D}$，其中$D_1=\begin{vmatrix}b_1&a_{12}&\cdots&a_{1n}\\b_2&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\b_n&a_{n2}&\cdots&a_{nn}\end{vmatrix}$，$D_2=\begin{vmatrix}a_{11}&b_1&\cdots&a_{1n}\\a_{21}&b_2&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{n1}&b_n&\cdots&a_{nn}\end{vmatrix}$，$\cdots$，$D_n=\begin{vmatrix}a_{b_1}&a_{12}&\cdots&b_1\\b_2&a_{22}&\cdots&b_2\\\vdots&\vdots&\ddots&\vdots\\b_n&a_{n2}&\cdots&b_n\end{vmatrix}$。
+
+定理：对于含有$n$个方程和$n$个未知数的$n$元齐次（常数项均为0）线性方程组$\begin{cases}a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n=0\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n=0\\\cdots\\a_{n1}x_1+a_{n2}x_2+\cdots+a_{nn}x_n=0\end{cases}$，当系数行列式$D=\begin{vmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{n1}&a_{n2}&\cdots&a_{nn}\end{vmatrix}\neq0$，此方程组只有零解。
+
+推论：（含有$n$个方程和$n$个未知数的）齐次线性方程组有非零解的充分必要条件是系数行列式的值为0；只有零解的充要条件是系数行列式的值为0。
+## 矩阵
+
+
 ## 向量
 
-定义：由n个数$a_1,a_2,a_3,\dots,a_n$组成的有序数组$\alpha=(a_1,a_2,a_3,\dots,a_n)$称为向量。其中数$a_i$叫做向量的第i个分量，$i=1,2,3,\dots,n$。分量的个数称为向量的维数。此时称向量$\alpha$为n维向量。
+定义：由$n$个数$a_1,a_2,a_3,\dots,a_n$组成的有序数组$\alpha=(a_1,a_2,a_3,\dots,a_n)$称为向量。其中数$a_i$叫做向量的第$i$个分量，$i=1,2,3,\dots,n$。分量的个数称为向量的维数。此时称向量$\alpha$为$n$维向量。
 
 行向量、列向量：
 

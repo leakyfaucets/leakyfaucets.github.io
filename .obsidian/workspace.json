@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "scripts/2026-07-26-music-theory.md",
+                "file": "scripts/2026-09-15-linguistics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-07-26-music-theory"
+              "title": "2026-09-15-linguistics"
             }
           }
         ]
@@ -191,6 +191,9 @@
   },
   "active": "b683a9fcdd8ff521",
   "lastOpenFiles": [
-    "scripts/2026-09-16-linear-algebra.md"
+    "scripts/2026-09-16-linear-algebra.md",
+    "scripts/2026-09-15-linguistics.md",
+    "scripts/2026-09-15-acoustics.md",
+    "scripts/2026-07-26-music-theory.md"
   ]
 }
