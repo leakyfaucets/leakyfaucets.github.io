@@ -355,13 +355,13 @@ V字打法适用于所有八X拍，但三角形打法只适用于八三拍和八
 
 ### 省略记号
 
-![emission marks](../assets/images/emission_mark.png)
+![emission marks](https://leakyfaucets.github.io/assets/images/emission_mark.png)
 
 tremolo /ˈtrɛməˌloʊ/ 震音
 
 ### 演奏记号
 
-![playing marks](../assets/images/playing_mark.png)
+![playing marks](https://leakyfaucets.github.io/assets/images/playing_mark.png)
 
 staccato /stəˈkɑːtəʊ/ 断音（的/地）
 portamento /ˌpɔːrtəˈmentəʊ/ 滑音
@@ -382,13 +382,13 @@ glissando /ɡlɪˈsændəʊ/ 滑奏/刮奏
 
 #### 波音
 
-![mordant](../assets/images/mordant.png)
+![mordant](https://leakyfaucets.github.io/assets/images/mordant.png)
 
-![mordant2](../assets/images/mordant2.png)
+![mordant2](https://leakyfaucets.github.io/assets/images/mordant2.png)
 
 #### 回音
 
-![turn](../assets/images/turn.png)
+![turn](https://leakyfaucets.github.io/assets/images/turn.png)
 
 #### 颤音
 
@@ -396,7 +396,7 @@ tr或tr+波浪线：trill
 
 #### 倚音
 
-![appoggiatura](../assets/images/appoggiatura.png)
+![appoggiatura](https://leakyfaucets.github.io/assets/images/appoggiatura.png)
 
 倚音：appoggiatura /əˌpɒdʒəˈtʊərə/
 
@@ -423,11 +423,11 @@ C谱号：两个“C”夹的那条线上的音是C4。当该线为三线时，�
 ### 拍号
 
 特殊拍号：
-![signature](../assets/images/signature.png)
+![signature](https://leakyfaucets.github.io/assets/images/signature.png)
 
 ### 休止符
 
-![rest](../assets/images/rest.png)
+![rest](https://leakyfaucets.github.io/assets/images/rest.png)
 
 全休止符还可以用于一个小节都休止。
 
