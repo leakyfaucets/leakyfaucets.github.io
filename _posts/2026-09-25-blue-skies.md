@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Blue Skies by Irving Berlin for SATB"
+title: "Blue Skies by Irving Berlin for SATB Score"
 categories: [Music]
 author:
 - Frank Zhang
@@ -8,7 +8,7 @@ comments: true
 modified_date: 2026-09-27
 ---
 
-本文提供了 Blue Skies (Irving Berlin) 四部合唱版的分谱和对应音频，以及各个声部的音频。如有错误，欢迎在评论区指出。
+本文提供了 Blue Skies (Irving Berlin) 四部合唱版的分谱和对应音频，以及各个声部的单独音频（无唱词，且衔接较为糟糕，仅供参考）。如有错误，欢迎在评论区指出。
 
 ## 总
 
