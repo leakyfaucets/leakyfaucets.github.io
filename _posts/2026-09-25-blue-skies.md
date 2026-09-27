@@ -8,7 +8,7 @@ comments: true
 modified_date: 2026-09-27
 ---
 
-本文提供了 Blue Skies (Irving Berlin) 四部合唱版的分谱和对应音频，以及各个声部的单独音频（无唱词，且衔接较为糟糕，仅供参考）。如有错误，欢迎在评论区指出。
+本文提供了 Blue Skies (Irving Berlin) 四部合唱版的谱子和对应音频，以及各个声部的单独音频（无唱词，且衔接较为糟糕，仅供参考）。如有错误，欢迎在评论区指出。
 
 ## 总
 
@@ -17,6 +17,13 @@ modified_date: 2026-09-27
   <source src="https://leakyfaucets.github.io/assets/audios/Blue_Skies.mp3" type="audio/mp3" />
   <p>你的浏览器不支持该音频，可点击<a href="https://leakyfaucets.github.io/assets/audios/Blue_Skies.mp3">此链接</a>收听。</p>
 </audio>
+
+总谱：
+<object data="https://leakyfaucets.github.io/assets/files/Blue_Skies.pdf" type="application/pdf" width="800" height="1200">
+  <p>
+    你的浏览器不支持PDF预览，可点击<a href="https://leakyfaucets.github.io/assets/files/Blue_Skies.pdf">此链接</a>下载。
+  </p>
+</object>
 
 ## 女声部
 
