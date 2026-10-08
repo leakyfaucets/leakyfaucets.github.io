@@ -153,7 +153,7 @@ $$
 
 行列式按一行/列展开：$n$阶行列式$D=|a_{ij}|$等于它的任意一行/列的各元素与其对应的代数余子式乘积的和，即$$D=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots+a_{in}A_{in}(i=1,2,\cdots,n)$$（按第$i$行展开）。为了计算简便，一般优先按0多的行/列展开。如果没有，可以利用上一部分的性质5构造尽可能多的0。
 
-异乘变零定理：$n$阶行列式$D=|a_{ij}|$的某一行/列的所有元素与另一行/列中对应元素的代数余子式乘积的和等于零，即$$a_{i1}A_{k1}+a_{i2}A_{k2}+\cdots+a_{in}A_{kn}=0,i\neq k$$
+**异乘变零定理**：$n$阶行列式$D=|a_{ij}|$的某一行/列的所有元素与另一行/列中对应元素的代数余子式乘积的和等于零，即$$a_{i1}A_{k1}+a_{i2}A_{k2}+\cdots+a_{in}A_{kn}=0,i\neq k$$
 例题：设行列式$D=\begin{vmatrix}3&0&4&0\\3&2&2&2\\0&-7&0&0\\5&3&-2&2\end{vmatrix}$，求：（1）$A_{41}+A_{42}+A_{43}+A_{44}$；（2）$M_{41}+M_{42}+M_{43}+M_{44}$。
 
 解：（1）$A_{41}+A_{42}+A_{43}+A_{44}=\begin{vmatrix}3&0&4&0\\3&2&2&2\\0&-7&0&0\\1&1&1&1\end{vmatrix}=(-7)\times(-1)^{3+2}\times\begin{vmatrix}3&4&0\\3&2&2\\1&1&1\end{vmatrix}=7\times\begin{vmatrix}3&4&0\\1&0&0\\1&1&1\end{vmatrix}=7\times(-1)^{3}\times\begin{vmatrix}4&0\\1&1\end{vmatrix}=-28$
@@ -220,10 +220,10 @@ $\begin{vmatrix}1&2&3\\1&1&0\\0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\1&2&3
 
 矩阵数乘满足分配律、交换律和结合律。
 
-矩阵乘法：只有当左边矩阵的列数等于右边矩阵的行数时，两个矩阵才能相乘，即对于矩阵$A_{j\times k}$和$B_{m\times n}$，只有当$k=m$时，两矩阵才可以相乘。方法：用左边矩阵的第一行分别乘以右边矩阵的每一列，得到乘积矩阵的第一行，依次进行下去得到乘积矩阵的所有行。因此，**乘积矩阵的行数等于左边矩阵的行数，列数等于右边矩阵的列数**，即$A_{j\times k}B_{m\times n}=(AB)_{j\times n}$。
+矩阵乘法：只有当左边矩阵的列数等于右边矩阵的行数时，两个矩阵才能相乘，即对于矩阵$A_{j\times k}$和$B_{m\times n}$，只有当$k=m$时，两矩阵才可以相乘。方法：用左边矩阵的第一行分别乘以右边矩阵的每一列，得到乘积矩阵的第一行，依次进行下去得到乘积矩阵的所有行。因此，**乘积矩阵的行数等于左边矩阵的行数，列数等于右边矩阵的列数**，即$A_{i\times j}B_{j\times k}=(AB)_{i\times k}$。
 
 注：
-1. 矩阵乘法满足结合律、分配律。
+1. 矩阵乘法满足结合律、分配律：$BA-B=B(A-E)$
 2. $AE=A$，$EA=A$，即单位矩阵在矩阵乘法中相当于数乘1。
 3. $\begin{pmatrix}a_1&0&\cdots&0\\0&a_2&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&a_n\end{pmatrix}\begin{pmatrix}b_1&0&\cdots&0\\0&b_2&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&b_n\end{pmatrix}=\begin{pmatrix}a_1b_1&0&\cdots&0\\0&a_2b_2&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&a_nb_n\end{pmatrix}$
 
@@ -250,9 +250,57 @@ $\begin{vmatrix}1&2&3\\1&1&0\\0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\1&2&3
 2. $(A+B)^2=A^2+AB+BA+B^2$，$(A-B)^2=A^2-AB-BA+B^2$
 3. $(A+B)(A-B)=A^2-AB+BA-B^2$
 4. 设$f(x)=x^2-2x+3$，则$f(A)=A^2-2A+3E$，注意常数项要乘$E$。
+5. $A^3+B^3=(A+B)(A^2-AB+B^2)$，$A^3-B^3=(A-B)(A^2+AB+B^2)$
 ### 矩阵的转置
 
+定义：将矩阵的各行依次变为列。
 
+性质：
+1. $(A^\top)^\top=A$
+2. $(A\pm B)^\top=A^\top\pm B^\top$
+3. $(kA)^\top=kA^\top$
+4. $(AB)^\top=B^\top A^\top$，$(ABC)^\top=C^\top B^\top A^\top$，注意顺序发生了变化。
+5. $(A^k)^\top=(A^\top)^k$
+
+对称矩阵：矩阵中各元素关于主对角线对称，即$a_{ij}=a_{ji}$，此时$A^\top=A$。若$A^\top=-A$，即$a_{ij}=-a_{ji}$，则称该矩阵为反对称矩阵。
+
+性质：
+1. 若$A$，$B$为同阶对称矩阵，则$AB$为对称矩阵的充要条件是$AB=BA$。
+2. 对任意矩阵$A$，$A^\top A$，$AA^\top$均为对称矩阵。
+3. 若$A$为反对称矩阵，$k$为正整数，则当$k$为偶数时，$A^k$为对称矩阵；当$k$为奇数时，$A^k$为反对称矩阵。
+### 方阵
+
+方阵的行列式：对于$n$阶方阵$A$，其行列式$|A|$定义为与其各元素均相同的行列式。
+
+性质：
+1. $|A^\top|=|A|$
+2. $|kA|=k^n|A|$
+3. $|AB|=|A||B|$
+4. $|A^m|=|A|^m$
+5. $|E|=1$
+
+方阵的伴随矩阵：按行求矩阵每个元素的代数余子式后按列放置形成伴随矩阵。对于$n$阶方阵$A$，其行列式$|A|$中元素$a_{ij}$的代数余子式为$A_{ij}$，则$A$的伴随矩阵$A^*$定义为$$A^*=\begin{pmatrix}A_{11}&A_{21}&\cdots&A_{n1}\\A_{12}&A_{22}&\cdots&A_{n2}\\\vdots&\vdots&\ddots&\vdots\\A_{1n}&A_{2n}&\cdots&A_{nn}\end{pmatrix}$$
+性质：
+1. $AA^*=A^*A=|A|E$
+2. 若$A$为$n$阶方阵，则$|A^*|=|A|^{n-1}$
+3. $(A^\top)^*=(A^*)^\top$
+4. 若$A$为$n$阶方阵，$k$为常数，则$(kA)^*=k^{n-1}A^*$。提出来$k$是$n-1$次是因为余子式是$n-1$阶行列式
+5. 对于二阶方阵$A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$，$A^*=\begin{pmatrix}d&-b\\-c&a\end{pmatrix}$，即主对角线上的元素交换位置，副对角线上的元素变为相反数。
+### 逆矩阵
+
+方阵的逆矩阵：对于$n$阶方阵$A$，若存在$n$阶方阵$B$，使得$AB=BA=E$，则称$A$是可逆矩阵，$B$为$A$的逆矩阵，记为$A^{-1}$，即$A^{-1}=B$。
+
+注意：不是所有方阵都是可逆矩阵。若方阵可逆，则该方阵的逆矩阵是唯一的。
+
+定义：对于$n$阶方阵$A$，若$|A|\neq 0$，则称$A$是非奇异矩阵；若$|A|=0$，则称$A$是奇异矩阵。
+
+定理：方阵可逆的充要条件是该方阵为非奇异矩阵（$|A|\neq 0$）。当$A$可逆时，$$A^{-1}=\frac{A^*}{|A|}$$，该求逆矩阵方法被称为伴随矩阵法。
+
+推论1：对角形矩阵$A=\begin{pmatrix}a_1&0&\cdots&0\\0&a_2&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&a_n\end{pmatrix}$可逆的充要条件是$a_1,a_2,\cdots,a_n$均为0。当$A$可逆时，有$$A^{-1}=\begin{pmatrix}\frac{1}{a_1}&0&\cdots&0\\0&\frac{1}{a_2}&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&\frac{1}{a_n}\end{pmatrix}$$
+推论2（定义的推广）：对于$n$阶方阵$A$，若存在$n$阶方阵$B$，使得$AB=E$或$BA=E$，则$A$可逆，且$A^{-1}=B$。
+
+性质：
+1. 
 ## 向量
 
 定义：由$n$个数$a_1,a_2,a_3,\dots,a_n$组成的有序数组$\alpha=(a_1,a_2,a_3,\dots,a_n)$称为向量。其中数$a_i$叫做向量的第$i$个分量，$i=1,2,3,\dots,n$。分量的个数称为向量的维数。此时称向量$\alpha$为$n$维向量。
@@ -281,3 +329,31 @@ $\alpha+\mathbf{0}=\mathbf{0}+\alpha=\alpha$
 
 $k\alpha=0\Leftrightarrow k=0或\alpha=\mathbf{0}$
 
+### 向量的线性组合
+
+定义：对于一组$n$维向量$\alpha_1,\alpha_2,\cdots,\alpha_m$和一组常数$k_1,k_2,\cdots,k_m$，称$k_1\alpha_1, k_2\alpha_2,\cdots,k_m\alpha_m$为该组向量的一个线性组合，该组常数称为组合系数。
+
+定义：对于一组$n$维向量$\beta,\alpha_1,\alpha_2,\cdots,\alpha_m$和一组常数$k_1,k_2,\cdots,k_m$，如果有$\beta=k_1\alpha_1, k_2\alpha_2,\cdots,k_m\alpha_m$，则称$\beta$是$\alpha_1,\alpha_2,\cdots,\alpha_m$的线性组合，也可称$\beta$可由$\alpha_1,\alpha_2,\cdots,\alpha_m$线性表示。
+
+性质：
+1. 零向量是任意向量的线性组合
+2. 向量组中的任意向量都可以由该向量组线性表示（其他向量系数取0即可）
+3. 任何一个$n$维向量都可以由$n$维基本单位向量组（以三维为例，（1，0，0），（0，1，0），（0，0，1））线性表示，即$\alpha=a_1\varepsilon_1+a_2\varepsilon_2+\cdots+a_n\varepsilon_n$。
+
+定义：对于向量组$\alpha_1,\alpha_2,\cdots,\alpha_n$和$\beta_1,\beta_2,\cdots,\beta_n$，若第一个向量组中的每个向量都可由第二个向量组线性表示，则称第一个向量组可由第二个向量组线性表示。若两个向量组能互相线性表示，则称两个向量组等价，记作$\alpha_1,\alpha_2,\cdots,\alpha_n\cong\beta_1,\beta_2,\cdots,\beta_n$
+
+性质：
+1. 等价具有传递性
+2. 等价具有交换性
+3. 一个向量组与其自身等价
+
+向量组的线性相关性：对于$m$维向量组$\alpha_1,\alpha_2,\cdots,\alpha_n$，若存在不全为0的数组$k_1,k_2,\cdots,k_n$，使得$k_1\alpha_1, k_2\alpha_2,\cdots,k_n\alpha_n=0$，则称该向量组线性相关，该数组为该向量组的一组相关系数；否则称该向量组线性无关。
+
+推论：
+1. 含有零向量的向量组必定线性相关（零向量系数不为0，其他向量系数为0）
+2. 向量组中有两个向量成比例，则该向量组必定线性相关。
+3. 若某个向量线性相关，则该向量必为零向量；若某个向量线性无关，则该向量必不为零向量
+4. 若$\alpha_1,\alpha_2,\cdots,\alpha_n$线性相关，则$\alpha_1,\alpha_2,\cdots,\alpha_n,\alpha_{n+1},\cdots,\alpha_{n+m}$也线性相关。（部分线性相关，则整体必定线性相关）
+5. 4的逆否命题也成立：整体线性无关，则部分线性无关
+6. 线性无关的向量组接长后仍是线性无关，线性相关的向量组截短后也线性相关。接长/截短指增加/减少向量的维数。
+7. 
