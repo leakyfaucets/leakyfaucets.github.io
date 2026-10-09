@@ -11,14 +11,10 @@
             "id": "b683a9fcdd8ff521",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "scripts/2026-09-16-linear-algebra.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2026-09-16-linear-algebra"
+              "title": "新标签页"
             }
           }
         ]
@@ -83,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "6790cc18d121127e",
@@ -191,8 +186,9 @@
   },
   "active": "b683a9fcdd8ff521",
   "lastOpenFiles": [
-    "scripts/2026-09-15-acoustics.md",
     "scripts/2026-09-16-linear-algebra.md",
+    "scripts/2026-10-08-new-era.md",
+    "scripts/2026-09-15-acoustics.md",
     "index.md",
     "README.md",
     "scripts/2026-09-15-linguistics.md",

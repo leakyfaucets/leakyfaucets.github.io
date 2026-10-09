@@ -7,7 +7,7 @@ author:
 comments: true
 ---
 
-本文提供了 Blue Skies (Irving Berlin) 四部合唱和钢琴伴奏版的谱子和音频。如有问题，欢迎在评论区提出。
+本文展示了 Blue Skies (Irving Berlin) 四部合唱版的谱子和音频。如有问题，欢迎在评论区提出。
 
 ## 更新日志
 
@@ -48,17 +48,10 @@ comments: true
   <p>你的浏览器不支持播放该音频，可点击<a href="https://leakyfaucets.github.io/assets/audios/Blue_Skies-Alto.mp3">此链接</a>收听。</p>
 </audio>
 
-分谱（不含简谱）：
+五线谱&简谱：
 <object data="https://leakyfaucets.github.io/assets/files/Blue_Skies-Women.pdf" type="application/pdf" width="800" height="1200">
   <p>
     你的浏览器不支持预览该PDF，可点击<a href="https://leakyfaucets.github.io/assets/files/Blue_Skies-Women.pdf">此链接</a>下载。
-  </p>
-</object>
-
-分谱（含简谱）：
-<object data="https://leakyfaucets.github.io/assets/files/Blue_Skies-Women-Jianpu.pdf" type="application/pdf" width="800" height="1200">
-  <p>
-    你的浏览器不支持预览该PDF，可点击<a href="https://leakyfaucets.github.io/assets/files/Blue_Skies-Women-Jianpu.pdf">此链接</a>下载。
   </p>
 </object>
 
@@ -82,17 +75,10 @@ comments: true
   <p>你的浏览器不支持播放该音频，可点击<a href="https://leakyfaucets.github.io/assets/audios/Blue_Skies-Bass.mp3">此链接</a>收听。</p>
 </audio>
 
-分谱（不含简谱）：
+五线谱+简谱：
 <object data="https://leakyfaucets.github.io/assets/files/Blue_Skies-Men.pdf" type="application/pdf" width="800" height="1200">
   <p>
     你的浏览器不支持预览该PDF，可点击<a href="https://leakyfaucets.github.io/assets/files/Blue_Skies-Men.pdf">此链接</a>下载。
-  </p>
-</object>
-
-分谱（含简谱）：
-<object data="https://leakyfaucets.github.io/assets/files/Blue_Skies-Men-Jianpu.pdf" type="application/pdf" width="800" height="1200">
-  <p>
-    你的浏览器不支持预览该PDF，可点击<a href="https://leakyfaucets.github.io/assets/files/Blue_Skies-Men-Jianpu.pdf">此链接</a>下载。
   </p>
 </object>
 
@@ -111,4 +97,4 @@ comments: true
   </p>
 </object>
 
-说明：对部分不可弹的小节进行了调整。
+注：对部分不可弹的小节进行了调整。
