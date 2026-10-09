@@ -11,10 +11,14 @@
             "id": "b683a9fcdd8ff521",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "scripts/2026-09-16-linear-algebra.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "2026-09-16-linear-algebra"
             }
           }
         ]
@@ -79,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "6790cc18d121127e",
@@ -186,12 +191,14 @@
   },
   "active": "b683a9fcdd8ff521",
   "lastOpenFiles": [
+    "assets/audios/Renmiantaohua-Tenor.mp3",
+    "assets/audios/Renmiantaohua-Soprano.mp3",
+    "scripts/2026-09-15-linguistics.md",
     "scripts/2026-09-16-linear-algebra.md",
     "scripts/2026-10-08-new-era.md",
     "scripts/2026-09-15-acoustics.md",
     "index.md",
     "README.md",
-    "scripts/2026-09-15-linguistics.md",
     "scripts/2026-07-26-music-theory.md"
   ]
 }
