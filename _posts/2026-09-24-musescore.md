@@ -1,4 +1,13 @@
+---
+layout: post
+title: "Musescore快捷键指南"
+categories: [Music]
+author:
+- Frank Zhang
+comments: true
+---
 
+笔记涵盖了Musescore 4.0部分常用的快捷键，不断更新中...
 
 ## 输入音符
 
@@ -33,6 +42,3 @@
 和弦标记：选中音符，Ctrl+K进入和弦标记编辑区，根音按A-G键，#升号，b降号，x重升，bb重降。按空格键编辑下一个音符的和弦标记。Esc退出编辑模式
 
 和弦标记编辑：双击开始编辑。
-
-
-

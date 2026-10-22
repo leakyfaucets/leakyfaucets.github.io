@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cohen的d计算方法选择"
-categories: [Statistics]
+categories: [Mathematics]
 author:
 - Frank Zhang
 comments: true

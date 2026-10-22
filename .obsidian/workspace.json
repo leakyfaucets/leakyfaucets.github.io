@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "548818601b651df8",
+        "id": "d06ed272bbf19c58",
         "type": "tabs",
         "children": [
           {
-            "id": "b683a9fcdd8ff521",
+            "id": "ef34454617723a9a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "6790cc18d121127e",
@@ -188,16 +189,20 @@
       "bases:新建数据库": false
     }
   },
-  "active": "b683a9fcdd8ff521",
+  "active": "ef34454617723a9a",
   "lastOpenFiles": [
+    "scripts/2026-09-15-linguistics.md",
+    "about.md",
+    "README.md",
+    "index.md",
+    "scripts/2026-06-05-effect-size.md",
+    "scripts/2026-06-11-linguistics-xmind.md",
+    "scripts/2026-09-15-acoustics.md",
+    "scripts/2026-09-24-musescore.md",
+    "scripts/2026-09-16-linear-algebra.md",
     "assets/audios/Renmiantaohua-Tenor.mp3",
     "assets/audios/Renmiantaohua-Soprano.mp3",
-    "scripts/2026-09-15-linguistics.md",
-    "scripts/2026-09-16-linear-algebra.md",
     "scripts/2026-10-08-new-era.md",
-    "scripts/2026-09-15-acoustics.md",
-    "index.md",
-    "README.md",
     "scripts/2026-07-26-music-theory.md"
   ]
 }
