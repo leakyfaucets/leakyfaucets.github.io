@@ -5,8 +5,9 @@ categories: [Music]
 author:
 - Frank Zhang
 comments: true
-modified_date: 2026-07-26
 ---
+
+本文是作者在学习[《零基础自学音乐学乐理合集-第二季（最终版）》](https://www.bilibili.com/video/BV14p4y1e7TV)时的笔记，可供参考。
 
 ## 唱名和音名
 

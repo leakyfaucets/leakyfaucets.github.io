@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "HTML学习笔记"
-categories: [HTML, Web]
+categories: [Web]
 author:
 - Frank Zhang
 comments: true
-# modified_date: 2026-06-11
 ---
 
 本文为作者在学习[MDN学习区](https://developer.mozilla.org/zh-CN/docs/Learn_web_development)时的笔记。作者对结构进行了调整，并补充了一些说明和例子。本文同样遵循[CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5)协议。
