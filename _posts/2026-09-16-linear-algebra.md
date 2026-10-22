@@ -147,13 +147,9 @@ $$
 
 转置行列式：对于$n$阶行列式$D$，将其行列互换后得到其转置行列式，记为$D^\top$。行列式：determinant，转置：transpose v&n。
 
-对称行列式：行列式关于主对角线“对称”，且主对角线上的元素全为0。如$\begin{vmatrix}0&2&6\\
-2&0&1\\
-6&1&0\end{vmatrix}$
+对称行列式：行列式关于主对角线“对称”，且主对角线上的元素全为0。如$\begin{vmatrix}0&2&6\\2&0&1\\6&1&0\end{vmatrix}$
 
-反对称行列式：主对角线对称位置上的元素互为相反数，且主对角线上的元素全为0。**奇数阶反对称行列式的值为0**，如$\begin{vmatrix}0&2&6\\
--2&0&1\\
--6&-1&0\end{vmatrix}=0$
+反对称行列式：主对角线对称位置上的元素互为相反数，且主对角线上的元素全为0。**奇数阶反对称行列式的值为0**，如$\begin{vmatrix}0&2&6\\-2&0&1\\-6&-1&0\end{vmatrix}=0$
 
 ### 1.4 行列式的性质
 
@@ -161,14 +157,9 @@ $$
 2. 交换某个行列式的两行/列，其值变为相反数。可利用排序对换奇偶性改变来证明。
 	1. 推论：若行列式有两行/列的对应元素相等，则行列式值为零。可利用上述性质交换两行/列，其值变为相反数后不变，说明其值为零。
 3. 用数$k$乘以行列式某一行/列的所有元素，等于用$k$乘以该行列式。
-	1. 推论：若行列式某一行/列的所有元素有公因数，则该公因数可以提到行列式外面。$\begin{vmatrix}k&2k\\
-6&9\end{vmatrix}=3k\begin{vmatrix}1&2\\
-2&3\end{vmatrix}$
+	1. 推论：若行列式某一行/列的所有元素有公因数，则该公因数可以提到行列式外面。$\begin{vmatrix}k&2k\\6&9\end{vmatrix}=3k\begin{vmatrix}1&2\\2&3\end{vmatrix}$
 	2. 若行列式有两行/列的元素对应成比例，则此行列式值为零。
-4. 若行列式的某一行/列的各元素都是两个数之和，则此行列式等于两个行列式之和，这两个行列式分别以这两个数之一作为所在行/列对应位置的元素，**其他位置的元素与原行列式相同**。如$\begin{vmatrix}1+2&2+3\\
-a&b\end{vmatrix}=\begin{vmatrix}1&2\\
-a&b\end{vmatrix}+\begin{vmatrix}2&3\\
-a&b\end{vmatrix}$
+4. 若行列式的某一行/列的各元素都是两个数之和，则此行列式等于两个行列式之和，这两个行列式分别以这两个数之一作为所在行/列对应位置的元素，**其他位置的元素与原行列式相同**。如$\begin{vmatrix}1+2&2+3\\a&b\end{vmatrix}=\begin{vmatrix}1&2\\a&b\end{vmatrix}+\begin{vmatrix}2&3\\a&b\end{vmatrix}$
 5. 将行列式的某一行/列的所有元素乘以同一数$k$后加到另一行/列对应位置的元素上，则行列式的值不变。利用性质4和推论3.2即可证明。
 
 ### 1.5 行列式按行/列展开
@@ -178,73 +169,28 @@ a&b\end{vmatrix}$
 行列式按一行/列展开：$n$阶行列式$D=|a_{ij}|$等于它的任意一行/列的各元素与其对应的代数余子式乘积的和，即$$D=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots+a_{in}A_{in}(i=1,2,\cdots,n)$$（按第$i$行展开）。为了计算简便，一般优先按0多的行/列展开。如果没有，可以利用上一部分的性质5构造尽可能多的0。
 
 **异乘变零定理**：$n$阶行列式$D=|a_{ij}|$的某一行/列的所有元素与另一行/列中对应元素的代数余子式乘积的和等于零，即$$a_{i1}A_{k1}+a_{i2}A_{k2}+\cdots+a_{in}A_{kn}=0,i\neq k$$
-例题：设行列式$D=\begin{vmatrix}3&0&4&0\\
-3&2&2&2\\
-0&-7&0&0\\
-5&3&-2&2\end{vmatrix}$，求：（1）$A_{41}+A_{42}+A_{43}+A_{44}$；（2）$M_{41}+M_{42}+M_{43}+M_{44}$。
+例题：设行列式$D=\begin{vmatrix}3&0&4&0\\3&2&2&2\\0&-7&0&0\\5&3&-2&2\end{vmatrix}$，求：（1）$A_{41}+A_{42}+A_{43}+A_{44}$；（2）$M_{41}+M_{42}+M_{43}+M_{44}$。
 
-解：（1）$A_{41}+A_{42}+A_{43}+A_{44}=\begin{vmatrix}3&0&4&0\\
-3&2&2&2\\
-0&-7&0&0\\
-1&1&1&1\end{vmatrix}=(-7)\times(-1)^{3+2}\times\begin{vmatrix}3&4&0\\
-3&2&2\\
-1&1&1\end{vmatrix}=7\times\begin{vmatrix}3&4&0\\
-1&0&0\\
-1&1&1\end{vmatrix}=7\times(-1)^{3}\times\begin{vmatrix}4&0\\
-1&1\end{vmatrix}=-28$
-（2）$M_{41}+M_{42}+M_{43}+M_{44}=-A_{41}+A_{42}-A_{43}+A_{44}=\begin{vmatrix}3&0&4&0\\
-3&2&2&2\\
-0&-7&0&0\\
--1&1&-1&1\end{vmatrix}=\dots=-56$
+解：（1）$A_{41}+A_{42}+A_{43}+A_{44}=\begin{vmatrix}3&0&4&0\\3&2&2&2\\0&-7&0&0\\1&1&1&1\end{vmatrix}=(-7)\times(-1)^{3+2}\times\begin{vmatrix}3&4&0\\3&2&2\\1&1&1\end{vmatrix}=7\times\begin{vmatrix}3&4&0\\1&0&0\\1&1&1\end{vmatrix}=7\times(-1)^{3}\times\begin{vmatrix}4&0\\1&1\end{vmatrix}=-28$
+（2）$M_{41}+M_{42}+M_{43}+M_{44}=-A_{41}+A_{42}-A_{43}+A_{44}=\begin{vmatrix}3&0&4&0\\3&2&2&2\\0&-7&0&0\\-1&1&-1&1\end{vmatrix}=\dots=-56$
 
 $k$阶子式的余子式和代数余子式：在$n$阶行列式$D$中，任意选取$k$行和$k$列（$1\leq k\leq n$），位于这些行列交叉点处的$k^2$个元素，按照原来的相对位置所构成的$k$阶行列式$N$为$D$的一个$k$阶子式。在这些行列之外的元素，按照原来的相对位置所构成的$n-k$阶行列式$M$为$N$的余子式。$N$的代数余子式的正负性由所有行号和列号之和决定。
 
 行列式按多行/列展开（拉普拉斯定理，Laplace theorem）：在$n$阶行列式$D$中，任意取定$k$行/列，则由这$k$行/列元素所能构成的所有$k$阶子式$N_1,N_2,\cdots,N_t(t=C_n^k)$与它们的对应代数余子式$A_1,A_2,\cdots,A_t$乘积之和等于行列式$D$的值，即$$D=N_1A_1+N_2A_2+\cdots+N_tA_t$$
 
 推论：
-$\begin{vmatrix}A&\mathbf{0}\\
-\mathbf{0}&B\end{vmatrix}=\begin{vmatrix}A&\mathbf{0}\\
-C&B\end{vmatrix}=\begin{vmatrix}A&C\\
-\mathbf{0}&B\end{vmatrix}=|A|\times|B|$，$\begin{vmatrix}\mathbf{0}&A\\
-B&\mathbf{0}\end{vmatrix}=\begin{vmatrix}\mathbf{0}&A\\
-B&C\end{vmatrix}=\begin{vmatrix}C&A\\
-B&\mathbf{0}\end{vmatrix}=(-1)^{mn}|A|\times|B|$，其中$A$的阶数为$m$，$B$的阶数为$n$。注意与三角形行列式中对角线与正负号的关系不同。
+$\begin{vmatrix}A&\mathbf{0}\\\mathbf{0}&B\end{vmatrix}=\begin{vmatrix}A&\mathbf{0}\\C&B\end{vmatrix}=\begin{vmatrix}A&C\\\mathbf{0}&B\end{vmatrix}=|A|\times|B|$，$\begin{vmatrix}\mathbf{0}&A\\B&\mathbf{0}\end{vmatrix}=\begin{vmatrix}\mathbf{0}&A\\B&C\end{vmatrix}=\begin{vmatrix}C&A\\B&\mathbf{0}\end{vmatrix}=(-1)^{mn}|A|\times|B|$，其中$A$的阶数为$m$，$B$的阶数为$n$。注意与三角形行列式中对角线与正负号的关系不同。
 
 证明：
-对于$\begin{vmatrix}A&\mathbf{0}\\
-C&B\end{vmatrix}$，其中$A$的阶数为$m$，$B$的阶数为$n$。根据拉普拉斯定理取前$m$行，则必须取$m$列。只有当取前$m$列时，子式才不会有元素全为0的列，因此有$\begin{vmatrix}A&\mathbf{0}\\
-C&B\end{vmatrix}=|A|\times(-1)^{2(1+2+3+\cdots+m)}|B|=|A|\times|B|$。
-对于$\begin{vmatrix}\mathbf{0}&A\\
-B&C\end{vmatrix}$，其中$A$的阶数为$m$，$B$的阶数为$n$。根据拉普拉斯定理取前$m$行，则必须取$m$列。只有当取后$m$列时，子式才不会有元素全为0的列，因此有$\begin{vmatrix}\mathbf{0}&A\\
-B&C\end{vmatrix}=|A|\times(-1)^{1+2+\cdots+m+n+1+n+2+\cdots+n+m}|B|=(-1)^{mn}|A|\cdot|B|$。
+对于$\begin{vmatrix}A&\mathbf{0}\\C&B\end{vmatrix}$，其中$A$的阶数为$m$，$B$的阶数为$n$。根据拉普拉斯定理取前$m$行，则必须取$m$列。只有当取前$m$列时，子式才不会有元素全为0的列，因此有$\begin{vmatrix}A&\mathbf{0}\\C&B\end{vmatrix}=|A|\times(-1)^{2(1+2+3+\cdots+m)}|B|=|A|\times|B|$。
+对于$\begin{vmatrix}\mathbf{0}&A\\B&C\end{vmatrix}$，其中$A$的阶数为$m$，$B$的阶数为$n$。根据拉普拉斯定理取前$m$行，则必须取$m$列。只有当取后$m$列时，子式才不会有元素全为0的列，因此有$\begin{vmatrix}\mathbf{0}&A\\B&C\end{vmatrix}=|A|\times(-1)^{1+2+\cdots+m+n+1+n+2+\cdots+n+m}|B|=(-1)^{mn}|A|\cdot|B|$。
 
 行列式的乘法：
-$\begin{vmatrix}1&2&3\\
-1&1&0\\
-0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\
-1&2&3\\
-1&1&-6\end{vmatrix}=\begin{vmatrix}1\times0+2\times1+3\times1&1\times1+2\times2+3\times1&1\times1+2\times3+3\times(-6)\\
-1\times0+1\times1+0\times1&1\times1+1\times2+0\times1&1\times1+1\times3+0\times(-6)\\
-\cdots&\cdots&\cdots\end{vmatrix}$
+$\begin{vmatrix}1&2&3\\1&1&0\\0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\1&2&3\\1&1&-6\end{vmatrix}=\begin{vmatrix}1\times0+2\times1+3\times1&1\times1+2\times2+3\times1&1\times1+2\times3+3\times(-6)\\1\times0+1\times1+0\times1&1\times1+1\times2+0\times1&1\times1+1\times3+0\times(-6)\\\cdots&\cdots&\cdots\end{vmatrix}$
 
 ### 1.6 克莱姆法则
 
-克莱姆法则（Cramer Rule）：对于含有$n$个方程和$n$个未知数的$n$元线性方程组$\begin{cases}a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n=b_1\\
-a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n=b_2\\
-\cdots\\
-a_{n1}x_1+a_{n2}x_2+\cdots+a_{nn}x_n=b_n\end{cases}$，当其系数行列式$D=\begin{vmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
-a_{21}&a_{22}&\cdots&a_{2n}\\
-\vdots&\vdots&\ddots&\vdots\\
-a_{n1}&a_{n2}&\cdots&a_{nn}\end{vmatrix}\neq0$时，方程组有唯一解$x_1=\frac{D_1}{D},x_2=\frac{D_2}{D},\cdots,x_n=\frac{D_n}{D}$，其中$D_1=\begin{vmatrix}b_1&a_{12}&\cdots&a_{1n}\\
-b_2&a_{22}&\cdots&a_{2n}\\
-\vdots&\vdots&\ddots&\vdots\\
-b_n&a_{n2}&\cdots&a_{nn}\end{vmatrix}$，$D_2=\begin{vmatrix}a_{11}&b_1&\cdots&a_{1n}\\
-a_{21}&b_2&\cdots&a_{2n}\\
-\vdots&\vdots&\ddots&\vdots\\
-a_{n1}&b_n&\cdots&a_{nn}\end{vmatrix}$，$\cdots$，$D_n=\begin{vmatrix}a_{b_1}&a_{12}&\cdots&b_1\\
-b_2&a_{22}&\cdots&b_2\\
-\vdots&\vdots&\ddots&\vdots\\
-b_n&a_{n2}&\cdots&b_n\end{vmatrix}$。
+克莱姆法则（Cramer Rule）：对于含有$n$个方程和$n$个未知数的$n$元线性方程组$\begin{cases}a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n=b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n=b_2\\\cdots\\a_{n1}x_1+a_{n2}x_2+\cdots+a_{nn}x_n=b_n\end{cases}$，当其系数行列式$D=\begin{vmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{n1}&a_{n2}&\cdots&a_{nn}\end{vmatrix}\neq0$时，方程组有唯一解$x_1=\frac{D_1}{D},x_2=\frac{D_2}{D},\cdots,x_n=\frac{D_n}{D}$，其中$D_1=\begin{vmatrix}b_1&a_{12}&\cdots&a_{1n}\\b_2&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\b_n&a_{n2}&\cdots&a_{nn}\end{vmatrix}$，$D_2=\begin{vmatrix}a_{11}&b_1&\cdots&a_{1n}\\a_{21}&b_2&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{n1}&b_n&\cdots&a_{nn}\end{vmatrix}$，$\cdots$，$D_n=\begin{vmatrix}a_{b_1}&a_{12}&\cdots&b_1\\b_2&a_{22}&\cdots&b_2\\\vdots&\vdots&\ddots&\vdots\\b_n&a_{n2}&\cdots&b_n\end{vmatrix}$。
 
 ## 第二章 矩阵
 
@@ -274,10 +220,7 @@ b_n&a_{n2}&\cdots&b_n\end{vmatrix}$。
 
 数量矩阵：主对角线上的所有元素相等的对角形矩阵，即$diag(a,a,\cdots,a)$
 
-单位矩阵：主对角线上的元素全为1，其他元素均为0的方阵。$n$阶单位矩阵$E=\begin{pmatrix}1&0&\cdots&0\\
-0&1&\cdots&0\\
-\vdots&\vdots&\ddots&\vdots\\
-0&0&\cdots&1\end{pmatrix}$
+单位矩阵：主对角线上的元素全为1，其他元素均为0的方阵。$n$阶单位矩阵$E=\begin{pmatrix}1&0&\cdots&0\\0&1&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&1\end{pmatrix}$
 
 ### 2.2 矩阵的运算
 
@@ -298,16 +241,7 @@ b_n&a_{n2}&\cdots&b_n\end{vmatrix}$。
 注：
 1. 矩阵乘法满足结合律、分配律：$BA-B=B(A-E)$
 2. $AE=A$，$EA=A$，即单位矩阵在矩阵乘法中相当于数乘1。
-3. $\begin{pmatrix}a_1&0&\cdots&0\\
-0&a_2&\cdots&0\\
-\vdots&\vdots&\ddots&\vdots\\
-0&0&\cdots&a_n\end{pmatrix}\begin{pmatrix}b_1&0&\cdots&0\\
-0&b_2&\cdots&0\\
-\vdots&\vdots&\ddots&\vdots\\
-0&0&\cdots&b_n\end{pmatrix}=\begin{pmatrix}a_1b_1&0&\cdots&0\\
-0&a_2b_2&\cdots&0\\
-\vdots&\vdots&\ddots&\vdots\\
-0&0&\cdots&a_nb_n\end{pmatrix}$
+3. $\begin{pmatrix}a_1&0&\cdots&0\\0&a_2&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&a_n\end{pmatrix}\begin{pmatrix}b_1&0&\cdots&0\\0&b_2&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&b_n\end{pmatrix}=\begin{pmatrix}a_1b_1&0&\cdots&0\\0&a_2b_2&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&a_nb_n\end{pmatrix}$
 
 注意：
 1. 矩阵乘法不满足交换律和消去律，即$AB=AC(A\neq O)$得不到$B=C$。
@@ -366,10 +300,7 @@ b_n&a_{n2}&\cdots&b_n\end{vmatrix}$。
 
 #### 2.4.2 方阵的伴随矩阵
 
-定义：按行求矩阵每个元素的代数余子式后按列放置形成伴随矩阵。对于$n$阶方阵$A$，其行列式$|A|$中元素$a_{ij}$的代数余子式为$A_{ij}$，则$A$的伴随矩阵$A^*$定义为$$A^*=\begin{pmatrix}A_{11}&A_{21}&\cdots&A_{n1}\\
-A_{12}&A_{22}&\cdots&A_{n2}\\
-\vdots&\vdots&\ddots&\vdots\\
-A_{1n}&A_{2n}&\cdots&A_{nn}\end{pmatrix}$$
+定义：按行求矩阵每个元素的代数余子式后按列放置形成伴随矩阵。对于$n$阶方阵$A$，其行列式$|A|$中元素$a_{ij}$的代数余子式为$A_{ij}$，则$A$的伴随矩阵$A^*$定义为$$A^*=\begin{pmatrix}A_{11}&A_{21}&\cdots&A_{n1}\\A_{12}&A_{22}&\cdots&A_{n2}\\\vdots&\vdots&\ddots&\vdots\\A_{1n}&A_{2n}&\cdots&A_{nn}\end{pmatrix}$$
 性质：
 1. $AA^*=A^*A=|A|E$
 2. $E^*=|E|E^{-1}=1$
@@ -377,9 +308,7 @@ A_{1n}&A_{2n}&\cdots&A_{nn}\end{pmatrix}$$
 4. $(A^\top)^*=(A^*)^\top$。即转置和伴随运算顺序可交换
 5. $A^*B^*=(BA)^*$
 6. 若$A$为$n$阶方阵，$k$为常数，则$(kA)^*=k^{n-1}A^*$。提出来$k$是$n-1$次是因为余子式是$n-1$阶行列式
-7. 对于二阶方阵$A=\begin{pmatrix}a&b\\
-c&d\end{pmatrix}$，$A^*=\begin{pmatrix}d&-b\\
--c&a\end{pmatrix}$，即主对角线上的元素交换位置，副对角线上的元素变为相反数。
+7. 对于二阶方阵$A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$，$A^*=\begin{pmatrix}d&-b\\-c&a\end{pmatrix}$，即主对角线上的元素交换位置，副对角线上的元素变为相反数。
 
 ### 2.4.3 方阵的逆矩阵
 
@@ -391,13 +320,7 @@ c&d\end{pmatrix}$，$A^*=\begin{pmatrix}d&-b\\
 
 定理：方阵可逆的充要条件是该方阵为非奇异矩阵（$|A|\neq 0$）。当$A$可逆时，$$A^{-1}=\frac{A^*}{|A|}$$，该求逆矩阵方法被称为伴随矩阵法。
 
-推论1：对角形矩阵$A=\begin{pmatrix}a_1&0&\cdots&0\\
-0&a_2&\cdots&0\\
-\vdots&\vdots&\ddots&\vdots\\
-0&0&\cdots&a_n\end{pmatrix}$可逆的充要条件是$a_1,a_2,\cdots,a_n$均不为0。当对角形矩阵$A$可逆时，有$$A^{-1}=\begin{pmatrix}\frac{1}{a_1}&0&\cdots&0\\
-0&\frac{1}{a_2}&\cdots&0\\
-\vdots&\vdots&\ddots&\vdots\\
-0&0&\cdots&\frac{1}{a_n}\end{pmatrix}$$
+推论1：对角形矩阵$A=\begin{pmatrix}a_1&0&\cdots&0\\0&a_2&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&a_n\end{pmatrix}$可逆的充要条件是$a_1,a_2,\cdots,a_n$均不为0。当对角形矩阵$A$可逆时，有$$A^{-1}=\begin{pmatrix}\frac{1}{a_1}&0&\cdots&0\\0&\frac{1}{a_2}&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&\frac{1}{a_n}\end{pmatrix}$$
 推论2（定义的推广）：对于$n$阶方阵$A$，若存在$n$阶方阵$B$，使得$AB=E$或$BA=E$，则$A$可逆，且$A^{-1}=B$。
 
 性质：
@@ -426,14 +349,7 @@ c&d\end{pmatrix}$，$A^*=\begin{pmatrix}d&-b\\
 
 初等列变换：类似于初等行变换。
 
-标准形矩阵：形如$\begin{pmatrix}1&0&0&0&0&0\\
-0&\ddots&0&0&0&0\\
-0&0&1&0&0&0\\
-0&0&0&0&0&0\\
-0&0&0&0&\ddots&0\\
-0&0&0&0&0&0\end{pmatrix}_{m\times n}$的矩阵，包括$\begin{vmatrix}1&0\\
-0&1\end{vmatrix}$、$\begin{vmatrix}0&0\\
-0&0\end{vmatrix}$等。
+标准形矩阵：形如$\begin{pmatrix}1&0&0&0&0&0\\0&\ddots&0&0&0&0\\0&0&1&0&0&0\\0&0&0&0&0&0\\0&0&0&0&\ddots&0\\0&0&0&0&0&0\end{pmatrix}_{m\times n}$的矩阵，包括$\begin{vmatrix}1&0\\0&1\end{vmatrix}$、$\begin{vmatrix}0&0\\0&0\end{vmatrix}$等。
 
 定理：任何矩阵$A$都可以通过初等变换化为标准形矩阵，并称此标准形矩阵为矩阵$A$的标准形。即任何矩阵都和其标准形矩阵等价。
 
@@ -478,92 +394,44 @@ c&d\end{pmatrix}$，$A^*=\begin{pmatrix}d&-b\\
 
 解释：若方阵$A$可逆，则$A^{-1}$也可逆，表示为$A^{-1}=P_1P_2\cdots P_\zeta$，即$P_1P_2\cdots P_\zeta E=A^{-1}$。由$A^{-1}A=E$可得$P_1P_2\cdots P_\zeta A=E$。因此，将$A$变为单位矩阵的若干次初等**行变换**会将单位矩阵变为$A^{-1}$。因此只能进行初等行变换。
 
-例：判断矩阵$A=\begin{pmatrix}1&1&1\\
-2&1&0\\
-1&-1&0\end{pmatrix}$是否可逆。若可逆，则求其逆矩阵。
+例：判断矩阵$A=\begin{pmatrix}1&1&1\\2&1&0\\1&-1&0\end{pmatrix}$是否可逆。若可逆，则求其逆矩阵。
 思路：将$A$从左向右按列开始变换为单位矩阵。
 $$\begin{align}
 (A\vdots E)
-&=\begin{pmatrix}1&1&1&\vdots&1&0&0\\
-2&1&0&\vdots&0&1&0\\
-1&-1&0&\vdots&0&0&1\end{pmatrix}\\
-&\to\begin{pmatrix}1&1&1&\vdots&1&0&0\\
-0&-1&-2&\vdots&-2&1&0\\
-0&-2&-1&\vdots&-1&0&1\end{pmatrix}\\
-&\to\begin{pmatrix}1&1&1&\vdots&1&0&0\\
-0&1&2&\vdots&2&-1&0\\
-0&-2&-1&\vdots&-1&0&1\end{pmatrix}\\
-&\to\begin{pmatrix}1&0&-1&\vdots&-1&1&0\\
-0&1&2&\vdots&2&-1&0\\
-0&0&3&\vdots&3&-2&1\end{pmatrix}\\
-&\to\begin{pmatrix}1&0&0&\vdots&0&\frac{1}{3}&\frac{1}{3}\\
-0&1&0&\vdots&0&\frac{1}{3}&-\frac{2}{3}\\
-0&0&1&\vdots&1&-\frac{2}{3}&\frac{1}{3}\end{pmatrix}
+&=\begin{pmatrix}1&1&1&\vdots&1&0&0\\2&1&0&\vdots&0&1&0\\1&-1&0&\vdots&0&0&1\end{pmatrix}\\
+&\to\begin{pmatrix}1&1&1&\vdots&1&0&0\\0&-1&-2&\vdots&-2&1&0\\0&-2&-1&\vdots&-1&0&1\end{pmatrix}\\
+&\to\begin{pmatrix}1&1&1&\vdots&1&0&0\\0&1&2&\vdots&2&-1&0\\0&-2&-1&\vdots&-1&0&1\end{pmatrix}\\
+&\to\begin{pmatrix}1&0&-1&\vdots&-1&1&0\\0&1&2&\vdots&2&-1&0\\0&0&3&\vdots&3&-2&1\end{pmatrix}\\
+&\to\begin{pmatrix}1&0&0&\vdots&0&\frac{1}{3}&\frac{1}{3}\\0&1&0&\vdots&0&\frac{1}{3}&-\frac{2}{3}\\0&0&1&\vdots&1&-\frac{2}{3}&\frac{1}{3}\end{pmatrix}
 \end{align}$$
-因此，$A$为可逆矩阵，且$A^{-1}=\begin{pmatrix}0&\frac{1}{3}&\frac{1}{3}\\
-0&\frac{1}{3}&-\frac{2}{3}\\
-1&-\frac{2}{3}&\frac{1}{3}\end{pmatrix}$。
+因此，$A$为可逆矩阵，且$A^{-1}=\begin{pmatrix}0&\frac{1}{3}&\frac{1}{3}\\0&\frac{1}{3}&-\frac{2}{3}\\1&-\frac{2}{3}&\frac{1}{3}\end{pmatrix}$。
 
 ### 2.7 分块矩阵
 
-将矩阵用横线和竖线进行分块而得到的小矩阵称为子块。如将$A$按行分块得到分块矩阵$\begin{pmatrix}\alpha_1\\
-\alpha_2\\
-\vdots\\
-\alpha_t\end{pmatrix}$，将$B$按列分块得到分块矩阵$\begin{pmatrix}\beta_1&\beta_2&\cdots&\beta_\zeta\end{pmatrix}$。
+将矩阵用横线和竖线进行分块而得到的小矩阵称为子块。如将$A$按行分块得到分块矩阵$\begin{pmatrix}\alpha_1\\\alpha_2\\\vdots\\\alpha_t\end{pmatrix}$，将$B$按列分块得到分块矩阵$\begin{pmatrix}\beta_1&\beta_2&\cdots&\beta_\zeta\end{pmatrix}$。
 
 特殊的分块矩阵：
 1. 上三角形分块矩阵，子块均为方阵
 2. 下三角形分块矩阵，子块均为方阵
-3. 对角形分块矩阵，子块均为方阵：$\begin{pmatrix}A_1&&&\\
-&A_2&&\\
-&&\ddots&\\
-&&&A_k\end{pmatrix}$
+3. 对角形分块矩阵，子块均为方阵：$\begin{pmatrix}A_1&&&\\&A_2&&\\&&\ddots&\\&&&A_k\end{pmatrix}$
 
 同型矩阵按照相同方法分块得到的两个分块矩阵才可进行加减运算。
 
 分块矩阵乘法：方法同矩阵乘法（将子块视为元素），**注意**第一个分块矩阵的列分块方式要与第二个分块矩阵的行分块方式相同（已蕴含第一个分块矩阵列数与第二个行数相等的前提）。
 
-注：$A$与$\begin{pmatrix}\alpha_1\\
-\alpha_2\\
-\vdots\\
-\alpha_t\end{pmatrix}$、$\begin{pmatrix}\beta_1&\beta_2&\cdots&\beta_\zeta\end{pmatrix}$与$B$无法相乘（$A$只有一列，$\begin{pmatrix}\alpha_1\\
-\alpha_2\\
-\vdots\\
-\alpha_t\end{pmatrix}$有$t$行）。
+注：$A$与$\begin{pmatrix}\alpha_1\\\alpha_2\\\vdots\\\alpha_t\end{pmatrix}$、$\begin{pmatrix}\beta_1&\beta_2&\cdots&\beta_\zeta\end{pmatrix}$与$B$无法相乘（$A$只有一列，$\begin{pmatrix}\alpha_1\\\alpha_2\\\vdots\\\alpha_t\end{pmatrix}$有$t$行）。
 
-对于按相同方式分块的两个同阶对角形分块矩阵$A$和$B$，有$AB=\begin{pmatrix}A_1B_1&&&\\
-&A_2B_2&&\\
-&&\ddots&\\
-&&&A_kB_k\end{pmatrix}$，$A^m=\begin{pmatrix}A_1^m&&&\\
-&A_2^m&&\\
-&&\ddots&\\
-&&&A_k^m\end{pmatrix}$。
+对于按相同方式分块的两个同阶对角形分块矩阵$A$和$B$，有$AB=\begin{pmatrix}A_1B_1&&&\\&A_2B_2&&\\&&\ddots&\\&&&A_kB_k\end{pmatrix}$，$A^m=\begin{pmatrix}A_1^m&&&\\&A_2^m&&\\&&\ddots&\\&&&A_k^m\end{pmatrix}$。
 
-分块矩阵的转置：将所有子块视作元素进行转置后，再对每个子块进行转置。如分块矩阵$A=\begin{pmatrix}A_1&A_2&A_3\\
-A_4&A_5&A_6\end{pmatrix}$的转置矩阵$A^\top=\begin{pmatrix}A_1^\top&A_4^\top\\
-A_2^\top&A_5^\top\\
-A_3^\top&A_6^\top\end{pmatrix}$。
+分块矩阵的转置：将所有子块视作元素进行转置后，再对每个子块进行转置。如分块矩阵$A=\begin{pmatrix}A_1&A_2&A_3\\A_4&A_5&A_6\end{pmatrix}$的转置矩阵$A^\top=\begin{pmatrix}A_1^\top&A_4^\top\\A_2^\top&A_5^\top\\A_3^\top&A_6^\top\end{pmatrix}$。
 
 分块矩阵的逆矩阵：
-1. 若$A$、$B$均可逆，则$\begin{pmatrix}A&\\
-&B\end{pmatrix}^{-1}=\begin{pmatrix}A^{-1}&\\
-&B^{-1}\end{pmatrix}$。证明：$\begin{pmatrix}A&\\
-&B\end{pmatrix}\begin{pmatrix}A^{-1}&\\
-&B^{-1}\end{pmatrix}=\begin{pmatrix}E&\\
-&E\end{pmatrix}=E$。
-2. 若$A$、$B$均可逆，则$\begin{pmatrix}&A\\
-B&\end{pmatrix}^{-1}=\begin{pmatrix}&B^{-1}\\
-A^{-1}&\end{pmatrix}$。
+1. 若$A$、$B$均可逆，则$\begin{pmatrix}A&\\&B\end{pmatrix}^{-1}=\begin{pmatrix}A^{-1}&\\&B^{-1}\end{pmatrix}$。证明：$\begin{pmatrix}A&\\&B\end{pmatrix}\begin{pmatrix}A^{-1}&\\&B^{-1}\end{pmatrix}=\begin{pmatrix}E&\\&E\end{pmatrix}=E$。
+2. 若$A$、$B$均可逆，则$\begin{pmatrix}&A\\B&\end{pmatrix}^{-1}=\begin{pmatrix}&B^{-1}\\A^{-1}&\end{pmatrix}$。
 
 分块矩阵的行列式：
 1. 上对角形、下对角形和对角线分块矩阵的行列式的值等于主对角线子块的行列式相乘。
-2. $\begin{vmatrix}A&\mathbf{0}\\
-\mathbf{0}&B\end{vmatrix}=\begin{vmatrix}A&\mathbf{0}\\
-C&B\end{vmatrix}=\begin{vmatrix}A&C\\
-\mathbf{0}&B\end{vmatrix}=|A|\times|B|$，$\begin{vmatrix}\mathbf{0}&A\\
-B&\mathbf{0}\end{vmatrix}=\begin{vmatrix}\mathbf{0}&A\\
-B&C\end{vmatrix}=\begin{vmatrix}C&A\\
-B&\mathbf{0}\end{vmatrix}=(-1)^{mn}|A|\times|B|$，其中方阵$A$的阶数为$m$，方阵$B$的阶数为$n$。
+2. $\begin{vmatrix}A&\mathbf{0}\\\mathbf{0}&B\end{vmatrix}=\begin{vmatrix}A&\mathbf{0}\\C&B\end{vmatrix}=\begin{vmatrix}A&C\\\mathbf{0}&B\end{vmatrix}=|A|\times|B|$，$\begin{vmatrix}\mathbf{0}&A\\B&\mathbf{0}\end{vmatrix}=\begin{vmatrix}\mathbf{0}&A\\B&C\end{vmatrix}=\begin{vmatrix}C&A\\B&\mathbf{0}\end{vmatrix}=(-1)^{mn}|A|\times|B|$，其中方阵$A$的阶数为$m$，方阵$B$的阶数为$n$。
 
 ### 2.8 矩阵的秩
 
@@ -587,9 +455,7 @@ B&\mathbf{0}\end{vmatrix}=(-1)^{mn}|A|\times|B|$，其中方阵$A$的阶数为$m
 5. 对于矩阵$A_{m\times n}$和$B_{n\times s}$，有$r(A)+r(B)-n\leq r(AB)\leq min(r(A),r(B))$，当$AB=O$时，有$r(A)+r(B)\leq n$；
 6. $r(A^\top A)=r(AA^\top)=r(A)=r(A^\top)$；
 7. 对于可逆方阵$P$和$Q$和任意矩阵$A$，有$r(A)=r(PA)=r(AQ)=r(PAQ)$；
-8. 对于$n(n\geq 2)$阶方阵$A$，其伴随矩阵的秩$r(A^*)=\begin{cases}n,r(A)=n\\
-1,r(A)=n-1\\
-0,r(A)<n-1\end{cases}$。证明：（1）当$r(A)=n$时，$|A|\neq0$，因此$|A^*|=|A^{n-1}|\neq0$，进而可得$A^*$为满秩；（2）当$r(A)=n-1$时，$A$有非0的$n-1$阶子式，进而有非0的代数余子式，因此$A^*\neq O$，$r(A^*)\geq1$；由$|A|=0$可得$AA^*=|A|E=O$，由结论5可得$r(A)+r(A^*)\leq n$，因此$r(A^*)\leq 1$。由两个条件可得$r(A^*)=1$；（3）当$r(A)<n-1$时，$A^*=O$，因此$r(A^*)=0$。
+8. 对于$n(n\geq 2)$阶方阵$A$，其伴随矩阵的秩$r(A^*)=\begin{cases}n,r(A)=n\\1,r(A)=n-1\\0,r(A)<n-1\end{cases}$。证明：（1）当$r(A)=n$时，$|A|\neq0$，因此$|A^*|=|A^{n-1}|\neq0$，进而可得$A^*$为满秩；（2）当$r(A)=n-1$时，$A$有非0的$n-1$阶子式，进而有非0的代数余子式，因此$A^*\neq O$，$r(A^*)\geq1$；由$|A|=0$可得$AA^*=|A|E=O$，由结论5可得$r(A)+r(A^*)\leq n$，因此$r(A^*)\leq 1$。由两个条件可得$r(A^*)=1$；（3）当$r(A)<n-1$时，$A^*=O$，因此$r(A^*)=0$。
 
 矩阵秩的求法：
 1. 定义法
@@ -720,24 +586,9 @@ $k\alpha=0\Leftrightarrow k=0$或$\alpha=\mathbf{0}$
 
 ### 4.1 线性方程组的表示
 
-定义：对于$n$元线性方程组$$\begin{cases}a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\
-a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&=b_2\\
-\cdots\\
-a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{cases}$$，分别称矩阵$A=\begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\
-a_{21}&a_{22}&\cdots&a_{2n}\\
-\vdots&\vdots&\ddots&\vdots\\
-a{m_1}&a_{m2}&\cdots&a_{mn}\end{pmatrix}$、$\overline{A}=\begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}&b_1\\
-a_{21}&a_{22}&\cdots&a_{2n}&b_2\\
-\vdots&\vdots&\ddots&\vdots&\vdots\\
-a{m_1}&a_{m2}&\cdots&a_{mn}&b_m\end{pmatrix}$为线性方程组的系数矩阵和增广矩阵。$A$为$m\times n$矩阵，$m$为方程个数，$n$为未知量个数。当常数项$b_1,b_2,\cdots,b_m$不全为零时，称该方程组为非齐次线性方程组；当常数项全为零时，称该方程组为齐次线性方程组，并称该齐次线性方程组为上述非齐次线性方程组的导出组。
+定义：对于$n$元线性方程组$$\begin{cases}a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&=b_2\\\cdots\\a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{cases}$$，分别称矩阵$A=\begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a{m_1}&a_{m2}&\cdots&a_{mn}\end{pmatrix}$、$\overline{A}=\begin{pmatrix}a_{11}&a_{12}&\cdots&a_{1n}&b_1\\a_{21}&a_{22}&\cdots&a_{2n}&b_2\\\vdots&\vdots&\ddots&\vdots&\vdots\\a{m_1}&a_{m2}&\cdots&a_{mn}&b_m\end{pmatrix}$为线性方程组的系数矩阵和增广矩阵。$A$为$m\times n$矩阵，$m$为方程个数，$n$为未知量个数。当常数项$b_1,b_2,\cdots,b_m$不全为零时，称该方程组为非齐次线性方程组；当常数项全为零时，称该方程组为齐次线性方程组，并称该齐次线性方程组为上述非齐次线性方程组的导出组。
 
-将系数矩阵按列分块，即$A=(\alpha_1,\alpha_2,\cdots,\alpha_n)$，将方程组的解组成列向量$x=\begin{bmatrix}x_1\\
-x_2\\
-\vdots\\
-x_n\end{bmatrix}$，将常数项组成列向量$b=\begin{bmatrix}b_1\\
-b_2\\
-\vdots\\
-b_n\end{bmatrix}$，则上述线性方程组可以表示为向量形式：$$x_1\alpha_1,x_2\alpha_2,\cdots,x_n\alpha_n=Ax=b$$，其导出组的向量形式为：$$x_1\alpha_1,x_2\alpha_2,\cdots,x_n\alpha_n=Ax=\mathbf{0}$$。
+将系数矩阵按列分块，即$A=(\alpha_1,\alpha_2,\cdots,\alpha_n)$，将方程组的解组成列向量$x=\begin{bmatrix}x_1\\x_2\\\vdots\\x_n\end{bmatrix}$，将常数项组成列向量$b=\begin{bmatrix}b_1\\b_2\\\vdots\\b_n\end{bmatrix}$，则上述线性方程组可以表示为向量形式：$$x_1\alpha_1,x_2\alpha_2,\cdots,x_n\alpha_n=Ax=b$$，其导出组的向量形式为：$$x_1\alpha_1,x_2\alpha_2,\cdots,x_n\alpha_n=Ax=\mathbf{0}$$。
 
 高斯消元法：通过**初等行变换**将增广矩阵化为行简化阶梯形矩阵，再还原为方程组形式，从最后一行开始逐步求出未知数的值。
 
@@ -776,20 +627,7 @@ b_n\end{bmatrix}$，则上述线性方程组可以表示为向量形式：$$x_1\
 
 求法：先看方程个数是否小于未知数个数。然后对系数矩阵进行初等行变换化为行简化阶梯形矩阵，其中主元列对应的未知数称为主元变量，其余列对应的未知数称为自由变量。由于主元的数量等于矩阵的秩，所以自由变量的数量$=n-r(A)$。接着令自由变量组成的$n-r$维向量依次取基本向量（每次令其中一个自由变量为1，其余自由变量为0），代回方程求出对应的主元变量，得到$n-r(A)$个解向量，即为方程组的一个基础解系。
 
-证明：由于基本单位向量组线性无关，因此其接长组、在这里是基础解系也线性无关。设同解方程组为$$\begin{cases}x_1=k_1x_3+k_2x_4\\
-x_2=k_3x_3+k_4x_4\end{cases}$$，求得的解向量为$\xi_1=\begin{pmatrix}k_2\\
-k_4\\
-0\\
-1\end{pmatrix}$、$\xi_2=\begin{pmatrix}k_1\\
-k_3\\
-1\\
-0\end{pmatrix}$。设方程组的任一解向量为$\xi=\begin{pmatrix}x_1\\
-x_2\\
-x_3\\
-x_4\end{pmatrix}$，有$\xi=\begin{pmatrix}k_1x_3+k_2x_4\\
-k_3x_3+k_4x_4\\
-x_3+0x_4\\
-0x_3+x_4\end{pmatrix}=x_4\xi_1+x_3\xi_2$，因此对于方程组的任一解向量，都可由$\xi_1$、$\xi_2$线性表示。
+证明：由于基本单位向量组线性无关，因此其接长组、在这里是基础解系也线性无关。设同解方程组为$$\begin{cases}x_1=k_1x_3+k_2x_4\\x_2=k_3x_3+k_4x_4\end{cases}$$，求得的解向量为$\xi_1=\begin{pmatrix}k_2\\k_4\\0\\1\end{pmatrix}$、$\xi_2=\begin{pmatrix}k_1\\k_3\\1\\0\end{pmatrix}$。设方程组的任一解向量为$\xi=\begin{pmatrix}x_1\\x_2\\x_3\\x_4\end{pmatrix}$，有$\xi=\begin{pmatrix}k_1x_3+k_2x_4\\k_3x_3+k_4x_4\\x_3+0x_4\\0x_3+x_4\end{pmatrix}=x_4\xi_1+x_3\xi_2$，因此对于方程组的任一解向量，都可由$\xi_1$、$\xi_2$线性表示。
 
 定理：对于$n$元齐次线性方程组，若系数矩阵的秩小于$n$，设其任一基础解系为$\xi_1,\xi_2,\cdots,\xi_{n-r}$，则方程组的通解可以表示为$$x=c_1\xi_1+c_2\xi_2+\cdots+c_{n-r}\xi_{n-r}$$，其中$c_1,c_2,\cdots,c_{n-r}$为任意常数。
 
@@ -803,32 +641,7 @@ x_3+0x_4\\
 
 非齐次线性方程组：看增广矩阵，通过行初等变换化为行最简形矩阵，主元列对应的未知量为主元变量，其他列对应的未知量为自由变量，最右列对应的数为常数，位于等号右边。然后列出同解方程，将自由变量移到等号右边。令自由变量的值都为零，得到方程组的一个解向量$\alpha$，称为特解。接着将增广矩阵的行最简形的最右列去掉得到系数矩阵的行最简形，接着按照齐次线性方程组的方法得到基础解系。通解写法：特解前的系数为1。
 
-非齐次线性方程组的简便算法：对于同解方程组$$\begin{cases}x_1=k_1+k_2x_3+k_3x_4\\
-x_2=k_4+k_53x_3+k_6x_4\end{cases}$$，设方程组的任一解向量为$\xi=\begin{pmatrix}x_1\\
-x_2\\
-x_3\\
-x_4\end{pmatrix}$，有$\xi=\begin{pmatrix}k_1+k_2x_3+k_3x_4\\
-k_4+k_53x_3+k_6x_4\\
-0+x_3+0x_4\\
-0+0x_3+x_4\end{pmatrix}=\begin{pmatrix}k_1\\
-k_4\\
-0\\
-0\end{pmatrix}+x_3\begin{pmatrix}k_2\\
-k_5\\
-1\\
-0\end{pmatrix}+x_4\begin{pmatrix}k_3\\
-k_6\\
-0\\
-1\end{pmatrix}$，因此方程组的通解为$x=\begin{pmatrix}k_1\\
-k_4\\
-0\\
-0\end{pmatrix}+c_1\begin{pmatrix}k_2\\
-k_5\\
-1\\
-0\end{pmatrix}+c_2\begin{pmatrix}k_3\\
-k_6\\
-0\\
-1\end{pmatrix}$。
+非齐次线性方程组的简便算法：对于同解方程组$$\begin{cases}x_1=k_1+k_2x_3+k_3x_4\\x_2=k_4+k_53x_3+k_6x_4\end{cases}$$，设方程组的任一解向量为$\xi=\begin{pmatrix}x_1\\x_2\\x_3\\x_4\end{pmatrix}$，有$\xi=\begin{pmatrix}k_1+k_2x_3+k_3x_4\\k_4+k_53x_3+k_6x_4\\0+x_3+0x_4\\0+0x_3+x_4\end{pmatrix}=\begin{pmatrix}k_1\\k_4\\0\\0\end{pmatrix}+x_3\begin{pmatrix}k_2\\k_5\\1\\0\end{pmatrix}+x_4\begin{pmatrix}k_3\\k_6\\0\\1\end{pmatrix}$，因此方程组的通解为$x=\begin{pmatrix}k_1\\k_4\\0\\0\end{pmatrix}+c_1\begin{pmatrix}k_2\\k_5\\1\\0\end{pmatrix}+c_2\begin{pmatrix}k_3\\k_6\\0\\1\end{pmatrix}$。
 
 ## 第五章 特征值与特征向量
 
@@ -944,11 +757,8 @@ $\Leftrightarrow$对于$A$的任一$s$重特征值$\lambda$，齐次线性方程
 
 定理：正交向量组必线性无关。
 
-施密特正交化方法：设向量组$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，则向量组$$\begin{align}\beta_1&=\alpha_1\\
-\beta_2&=\alpha_2-\frac{(\alpha_2,\beta_1)}{(\beta_1,\beta_1)}\beta_1,\\
-\beta_3&=\alpha_3-\frac{(\alpha_3,\beta_1)}{(\beta_1,\beta_1)}\beta_1-\frac{(\alpha_3,\beta_2)}{(\beta_2,\beta_2)}\beta_2,
-\\
-\cdots&\cdots\end{align}$$为正交向量组。再将该向量组单位化（除以模）得到与向量组$\alpha_1,\alpha_2,\cdots,\alpha_s$等价的标准正交向量组。
+施密特正交化方法：设向量组$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，则向量组$$\begin{align}\beta_1&=\alpha_1\\\beta_2&=\alpha_2-\frac{(\alpha_2,\beta_1)}{(\beta_1,\beta_1)}\beta_1,\\\beta_3&=\alpha_3-\frac{(\alpha_3,\beta_1)}{(\beta_1,\beta_1)}\beta_1-\frac{(\alpha_3,\beta_2)}{(\beta_2,\beta_2)}\beta_2,
+\\\cdots&\cdots\end{align}$$为正交向量组。再将该向量组单位化（除以模）得到与向量组$\alpha_1,\alpha_2,\cdots,\alpha_s$等价的标准正交向量组。
 
 正交矩阵：$AA^\top=E$。
 
@@ -977,10 +787,7 @@ $\Leftrightarrow$对于$A$的任一$s$重特征值$\lambda$，齐次线性方程
 ### 5.7 实对称矩阵的对角化
 
 实对称矩阵对角化：求正交矩阵$Q$，使得$Q^{-1}AQ=\Lambda$
-先求出所有特征向量。不同特征值对应的特征向量正交，无需正交化；同一特征值对应的特征向量，如果不正交的话，需要正交化。然后再进行单位化，求出单位正交向量组$\gamma_1,\gamma_2,\cdots,\gamma_n$，令矩阵$Q=(\gamma_1,\gamma_2,\cdots,\gamma_n)$，则$Q$为正交矩阵，且$\Lambda=\begin{pmatrix}\lambda_1&&&\\
-&\lambda_2&&\\
-&&\cdots&\\
-&&&\lambda_n\end{pmatrix}$。
+先求出所有特征向量。不同特征值对应的特征向量正交，无需正交化；同一特征值对应的特征向量，如果不正交的话，需要正交化。然后再进行单位化，求出单位正交向量组$\gamma_1,\gamma_2,\cdots,\gamma_n$，令矩阵$Q=(\gamma_1,\gamma_2,\cdots,\gamma_n)$，则$Q$为正交矩阵，且$\Lambda=\begin{pmatrix}\lambda_1&&&\\&\lambda_2&&\\&&\cdots&\\&&&\lambda_n\end{pmatrix}$。
 
 ## 第六章 二次型
 
@@ -995,10 +802,7 @@ a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
 a_{n1} & a_{n2} & \cdots & a_{nn}
-\end{pmatrix},\mathbf{x}=\begin{pmatrix}x_1\\
-x_2\\
-\vdots\\
-x_n\end{pmatrix}$$
+\end{pmatrix},\mathbf{x}=\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix}$$
 ，则上式可写成$$f(x_1,x_2,\cdots,x_n)=\mathbf{x}^\top A\mathbf{x}$$，该式称为二次型式的矩阵表达式。
 
 $A$的写法：先找平方项的系数，写在主对角线上，然后每个交叉项的系数除以二放在主对角线的对称两侧。
@@ -1015,20 +819,11 @@ $A$的写法：先找平方项的系数，写在主对角线上，然后每个�
 
 二次型的惯性指数和符号差：在标准形中，正系数平方项的个数$p$称为二次型的正惯性指数，负系数平方项的个数$q$称为二次型的负惯性指数，$p-q$称为二次型的符号差，二次型的秩$r(f)=p+q$。
 
-二次型的线性变换：设两组变量$x_1,x_2,\cdots,x_n$和$y_1,y_2,\cdots,y_n$，关系式$$\begin{cases}x_1&=c_{11}y_1+c_{12}y_2+\cdots+c_{1n}y_n\\
-x_2&=c_{21}y_1+c_{22}y_2+\cdots+c_{2n}y_n\\
-&\cdots\\
-x_n&=c_{n1}y_1+c_{n2}y_2+\cdots+c_{nn}y_n\end{cases}$$称为由变量$x_1,x_2,\cdots,x_n$到$y_1,y_2,\cdots,y_n$的一个线性变换，其矩阵形式为$$\begin{pmatrix}x_1\\
-x_2\\
-\vdots\\
-x_n\end{pmatrix}=\begin{pmatrix}c_{11} & c_{12} & \cdots & c_{1n} \\
+二次型的线性变换：设两组变量$x_1,x_2,\cdots,x_n$和$y_1,y_2,\cdots,y_n$，关系式$$\begin{cases}x_1&=c_{11}y_1+c_{12}y_2+\cdots+c_{1n}y_n\\x_2&=c_{21}y_1+c_{22}y_2+\cdots+c_{2n}y_n\\&\cdots\\x_n&=c_{n1}y_1+c_{n2}y_2+\cdots+c_{nn}y_n\end{cases}$$称为由变量$x_1,x_2,\cdots,x_n$到$y_1,y_2,\cdots,y_n$的一个线性变换，其矩阵形式为$$\begin{pmatrix}x_1\\x_2\\\vdots\\x_n\end{pmatrix}=\begin{pmatrix}c_{11} & c_{12} & \cdots & c_{1n} \\
 c_{21} & c_{22} & \cdots & c_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
 c_{n1} & c_{n2} & \cdots & c_{nn}
-\end{pmatrix}\begin{pmatrix}y_1\\
-y_2\\
-\vdots\\
-y_n\end{pmatrix}$$，记为$\mathbf{x}=C\mathbf{y}$。若$|C|\neq0$，则称上式为可逆线性变换、$\mathbf{y}=C^{-1}\mathbf{x}$称为上式的逆线性变换，简称逆变换。若$C$为正交矩阵，则称上式为正交线性变换，简称正交变换。
+\end{pmatrix}\begin{pmatrix}y_1\\y_2\\\vdots\\y_n\end{pmatrix}$$，记为$\mathbf{x}=C\mathbf{y}$。若$|C|\neq0$，则称上式为可逆线性变换、$\mathbf{y}=C^{-1}\mathbf{x}$称为上式的逆线性变换，简称逆变换。若$C$为正交矩阵，则称上式为正交线性变换，简称正交变换。
 
 定理：二次型经过可逆线性变换得到的仍是二次型，且秩不变。
 
@@ -1064,14 +859,8 @@ f(x_1,x_2,x_3)&=x_1^2-2x_1x_2+2x_1x_3-3x_2^2-6x_2x_3+4x_3^2\\
 &=x_1^2-2x_1(x_2-x_3)+(x_2-x_3)^2-4x_2^2-4x_2x_3+3x_3^2\\
 &=(x_1+x_2-x_3)^2-(4x_2^2+4x_2x_3+x_3^2)+4x_3^2\\
 &=(x_1+x_2-x_3)^2-(2x_2+x_3)^2+4x_3^2
-\end{align}$$设$$\begin{cases}y_1&=x_1+x_2-x_3\\
-y_2&=2x_2+x_3\\
-y_3&=x_3\end{cases}$$，则有$f(y_1,y_2,y_3)=y_1^2+y_2^2+4y_3^2$，为标准形。注意上式为$\mathbf{y}=C^{-1}\mathbf{x}$，需要化为$\mathbf{x}=C\mathbf{y}$形式。转换时从下往上看，即$x_3=y_3$，$x_2=\frac{y_2-x_3}{2}=\frac{y_2}{2}-\frac{y_3}{2}$，$x_1=y_1-x_2+x_3=y_1-\frac{y_2}{2}+\frac{3y_3}{2}$。因此，$$C=\begin{pmatrix}1&-\frac{1}{2}&\frac{3}{2}\\
-0&\frac{1}{2}&-\frac{1}{2}\\
-0&0&1\end{pmatrix}$$
-对于没有二次项的二次型，需要先设$$\begin{cases}x_1&=y_1+y_2\\
-x_2&=y_1-y_2\\
-x_3&=y_3\end{cases}$$，得到含有二次型的二次型。进而按照上面的方法进行配方。配方后得到关于$z$的二次型，需要通过两次的$C$相乘得到$\mathbf{x}=C\mathbf{z}$。
+\end{align}$$设$$\begin{cases}y_1&=x_1+x_2-x_3\\y_2&=2x_2+x_3\\y_3&=x_3\end{cases}$$，则有$f(y_1,y_2,y_3)=y_1^2+y_2^2+4y_3^2$，为标准形。注意上式为$\mathbf{y}=C^{-1}\mathbf{x}$，需要化为$\mathbf{x}=C\mathbf{y}$形式。转换时从下往上看，即$x_3=y_3$，$x_2=\frac{y_2-x_3}{2}=\frac{y_2}{2}-\frac{y_3}{2}$，$x_1=y_1-x_2+x_3=y_1-\frac{y_2}{2}+\frac{3y_3}{2}$。因此，$$C=\begin{pmatrix}1&-\frac{1}{2}&\frac{3}{2}\\0&\frac{1}{2}&-\frac{1}{2}\\0&0&1\end{pmatrix}$$
+对于没有二次项的二次型，需要先设$$\begin{cases}x_1&=y_1+y_2\\x_2&=y_1-y_2\\x_3&=y_3\end{cases}$$，得到含有二次型的二次型。进而按照上面的方法进行配方。配方后得到关于$z$的二次型，需要通过两次的$C$相乘得到$\mathbf{x}=C\mathbf{z}$。
 
 定理：任何一个$n$元二次型都可以通过可逆线性变换化为标准形。
 
@@ -1215,23 +1004,13 @@ A\sim
 $$，简化行阶梯形中主元在第1、2、4列，因此原矩阵中对应的列向量$\alpha_1,\alpha_2,\alpha_4$线性无关，并且张成整个列空间。所以该生成子空间的一个基为
 $$
 \left\{
-\begin{pmatrix}1\\
-2\\
--1\\
--1\end{pmatrix},
-\begin{pmatrix}2\\
-5\\
-2\\
--1\end{pmatrix},
-\begin{pmatrix}-1\\
-6\\
-17\\
-9\end{pmatrix}
+\begin{pmatrix}1\\2\\-1\\-1\end{pmatrix},
+\begin{pmatrix}2\\5\\2\\-1\end{pmatrix},
+\begin{pmatrix}-1\\6\\17\\9\end{pmatrix}
 \right\}
 $$，维数为3。
 
-定义：设$e_1,e_2,\cdots,e_m$是向量空间的一组基，满足两两正交，且每个向量都是单位向量，即$$(e_i,e_j)=\begin{cases}1,i=j\\
-0,i\neq j\end{cases}$$，则称$e_1,e_2,\cdots,e_m$是向量空间的一组标准正交基，或规范正交基。
+定义：设$e_1,e_2,\cdots,e_m$是向量空间的一组基，满足两两正交，且每个向量都是单位向量，即$$(e_i,e_j)=\begin{cases}1,i=j\\0,i\neq j\end{cases}$$，则称$e_1,e_2,\cdots,e_m$是向量空间的一组标准正交基，或规范正交基。
 
 定义：设向量组$\alpha_1,\alpha_2,\cdots,\alpha_r$是向量空间$V$的一组基，则$V$中的任一向量$\alpha$可唯一地表示为$$\alpha=x_1\alpha_1+x_2\alpha_2+\cdots+x_r\alpha_r$$，表示系数$x_1,x_2,\cdots,x_r\in R$称为向量$\alpha$在基$\alpha_1,\alpha_2,\cdots,\alpha_r$下的坐标。
 
