@@ -13,7 +13,7 @@ comments: true
 
 ### 1.1 二阶和三阶行列式
 
-**二阶行列式**：四个数$a_{11}, a_{12}, a_{21}, a_{22}$排成两行两列，两边加竖线，称为二阶行列式。它表示一个数，其定义式为
+\ast \ast 二阶行列式\ast \ast ：四个数$a_{11}, a_{12}, a_{21}, a_{22}$排成两行两列，两边加竖线，称为二阶行列式。它表示一个数，其定义式为
 $$
 \begin{vmatrix}
 a_{11} & a_{12} \\\\
@@ -23,7 +23,7 @@ a_{21} & a_{22}
 $$
 ，其中$a_{ij}$称为元素，$i$为行数，$j$为列数；从左上到右下为主对角线，从左下到右上为次对角线/副对角线。
 
-**三阶行列式**：九个数排成三行三列，两边加竖线，称为三阶行列式。它表示一个数，其定义式为
+\ast \ast 三阶行列式\ast \ast ：九个数排成三行三列，两边加竖线，称为三阶行列式。它表示一个数，其定义式为
 $$
 \begin{vmatrix}
 a_{11} & a_{12} & a_{13} \\\\
@@ -69,29 +69,29 @@ $$
 
 ### 1.2 排列
 
-**$n$级排列**：由$1,2,\dots,n$组成的有序数组称作$n$级排列。
+\ast \ast $n$级排列\ast \ast ：由$1,2,\dots,n$组成的有序数组称作$n$级排列。
 
 $n$级标准排列：在$n$级排列$i_1i_2\cdots i_n$中，$i_1<i_2<\cdots<i_n$，则称该排列为$n$级标准排列。
 
-**逆序**：在$n$级排列$i_1i_2\cdots i_n$中，如果较大的数$i_s$排在较小的数$i_t$的前面，则称$i_s$与$i_t$构成一个逆序。
+\ast \ast 逆序\ast \ast ：在$n$级排列$i_1i_2\cdots i_n$中，如果较大的数$i_s$排在较小的数$i_t$的前面，则称$i_s$与$i_t$构成一个逆序。
 
-**逆序数**：$n$级排列$i_1i_2\cdots i_n$的逆序数为该排列的逆序个数，记为$N(i_1i_2\cdots i_n)$。如$N(6471325)=13$，先看6后面比它小的数有5个，再看4前面比它小的数有3个，7前面有4个，1前面没有，3前面有1个，2前面没有，加起来为13。
+\ast \ast 逆序数\ast \ast ：$n$级排列$i_1i_2\cdots i_n$的逆序数为该排列的逆序个数，记为$N(i_1i_2\cdots i_n)$。如$N(6471325)=13$，先看6后面比它小的数有5个，再看4前面比它小的数有3个，7前面有4个，1前面没有，3前面有1个，2前面没有，加起来为13。
 
-**奇排列**：逆序数为奇数的排列。
+\ast \ast 奇排列\ast \ast ：逆序数为奇数的排列。
 
-**偶排列**：逆序数为偶数的排列。
+\ast \ast 偶排列\ast \ast ：逆序数为偶数的排列。
 
 例题：若6级排列$4k52t1$是奇排列，则$k=$，$t=$。
 
 首先由$4k52t1$是6级排列可得到$k=3,t=6$或$k=6,t=3$，把这两种情况均计算一遍即可得到答案。
 
-**对换**：在一个$n$级排列中，互换某两个数的位置，其余数不变，可得到另一个排列。这样的变换称为对换。
+\ast \ast 对换\ast \ast ：在一个$n$级排列中，互换某两个数的位置，其余数不变，可得到另一个排列。这样的变换称为对换。
 
-**定理1.1**：一个排列经过一次对换后，奇偶性改变。
+\ast \ast 定理1.1\ast \ast ：一个排列经过一次对换后，奇偶性改变。
 
 证明：对于一个排列中相邻的数所进行的对换，该对换只会让逆序数+1或-1，因此在这种情况下排列的奇偶性改变。对于不相邻数所进行的对换，可以转换成$2k+1$次相邻数的对换，因此在这种情况下排列的奇偶性也会改变。如1234变为4231要进行5次对换，$1234\to1243\to1423\to4123\to4213\to4231$，$k$为两数之间的数的数量。
 
-**定理1.2**：$n$级排列共有$n!$个，其中奇排列和偶排列各占一半，各为$\frac{n!}{2}(n\geq2)$个。
+\ast \ast 定理1.2\ast \ast ：$n$级排列共有$n!$个，其中奇排列和偶排列各占一半，各为$\frac{n!}{2}(n\geq2)$个。
 
 ### 1.3 n阶行列式
 
@@ -149,7 +149,7 @@ $$
 
 对称行列式：行列式关于主对角线“对称”，且主对角线上的元素全为0。如$\begin{vmatrix}0&2&6\\\\2&0&1\\\\6&1&0\end{vmatrix}$
 
-反对称行列式：主对角线对称位置上的元素互为相反数，且主对角线上的元素全为0。**奇数阶反对称行列式的值为0**，如$\begin{vmatrix}0&2&6\\\\-2&0&1\\\\-6&-1&0\end{vmatrix}=0$
+反对称行列式：主对角线对称位置上的元素互为相反数，且主对角线上的元素全为0。\ast \ast 奇数阶反对称行列式的值为0\ast \ast ，如$\begin{vmatrix}0&2&6\\\\-2&0&1\\\\-6&-1&0\end{vmatrix}=0$
 
 ### 1.4 行列式的性质
 
@@ -159,7 +159,7 @@ $$
 3. 用数$k$乘以行列式某一行/列的所有元素，等于用$k$乘以该行列式。
 	1. 推论：若行列式某一行/列的所有元素有公因数，则该公因数可以提到行列式外面。$\begin{vmatrix}k&2k\\\\6&9\end{vmatrix}=3k\begin{vmatrix}1&2\\\\2&3\end{vmatrix}$
 	2. 若行列式有两行/列的元素对应成比例，则此行列式值为零。
-4. 若行列式的某一行/列的各元素都是两个数之和，则此行列式等于两个行列式之和，这两个行列式分别以这两个数之一作为所在行/列对应位置的元素，**其他位置的元素与原行列式相同**。如$\begin{vmatrix}1+2&2+3\\\\a&b\end{vmatrix}=\begin{vmatrix}1&2\\\\a&b\end{vmatrix}+\begin{vmatrix}2&3\\\\a&b\end{vmatrix}$
+4. 若行列式的某一行/列的各元素都是两个数之和，则此行列式等于两个行列式之和，这两个行列式分别以这两个数之一作为所在行/列对应位置的元素，\ast \ast 其他位置的元素与原行列式相同\ast \ast 。如$\begin{vmatrix}1+2&2+3\\\\a&b\end{vmatrix}=\begin{vmatrix}1&2\\\\a&b\end{vmatrix}+\begin{vmatrix}2&3\\\\a&b\end{vmatrix}$
 5. 将行列式的某一行/列的所有元素乘以同一数$k$后加到另一行/列对应位置的元素上，则行列式的值不变。利用性质4和推论3.2即可证明。
 
 ### 1.5 行列式按行/列展开
@@ -168,7 +168,7 @@ $$
 
 行列式按一行/列展开：$n$阶行列式$D=\vert a_{ij}\vert$等于它的任意一行/列的各元素与其对应的代数余子式乘积的和，即$$D=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots+a_{in}A_{in}$$（按第i行展开）。为了计算简便，一般优先按0多的行/列展开。如果没有，可以利用上一部分的性质5构造尽可能多的0。
 
-**异乘变零定理**：$n$阶行列式$D=\vert a_{ij}\vert$的某一行/列的所有元素与另一行/列中对应元素的代数余子式乘积的和等于零，即$$a_{i1}A_{k1}+a_{i2}A_{k2}+\cdots+a_{in}A_{kn}=0,i\neq k$$
+\ast \ast 异乘变零定理\ast \ast ：$n$阶行列式$D=\vert a_{ij}\vert$的某一行/列的所有元素与另一行/列中对应元素的代数余子式乘积的和等于零，即$$a_{i1}A_{k1}+a_{i2}A_{k2}+\cdots+a_{in}A_{kn}=0,i\neq k$$
 
 例题：设行列式$D=\begin{vmatrix}3&0&4&0\\\\3&2&2&2\\\\0&-7&0&0\\\\5&3&-2&2\end{vmatrix}$，求：（1）$A_{41}+A_{42}+A_{43}+A_{44}$；（2）$M_{41}+M_{42}+M_{43}+M_{44}$。
 
@@ -225,9 +225,9 @@ $\begin{vmatrix}1&2&3\\\\1&1&0\\\\0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\\
 
 ### 2.2 矩阵的运算
 
-加法：只有**同型矩阵**能相加，将对应位置元素求和即可。
+加法：只有\ast \ast 同型矩阵\ast \ast 能相加，将对应位置元素求和即可。
 
-减法：只有**同型矩阵**能相减，将对应位置元素求差即可。
+减法：只有\ast \ast 同型矩阵\ast \ast 能相减，将对应位置元素求差即可。
 
 矩阵加/减法满足交换律、结合律。
 
@@ -237,7 +237,7 @@ $\begin{vmatrix}1&2&3\\\\1&1&0\\\\0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\\
 
 矩阵数乘满足分配律、交换律和结合律。
 
-矩阵乘法：只有当左边矩阵的列数等于右边矩阵的行数时，两个矩阵才能相乘，即对于矩阵$A_{j\times k}$和$B_{m\times n}$，只有当$k=m$时，两矩阵才可以相乘。方法：用左边矩阵的第一行分别乘以右边矩阵的每一列，得到乘积矩阵的第一行，依次进行下去得到乘积矩阵的所有行。因此，**乘积矩阵的行数等于左边矩阵的行数，列数等于右边矩阵的列数**，即$A_{i\times j}B_{j\times k}=(AB)_{i\times k}$。
+矩阵乘法：只有当左边矩阵的列数等于右边矩阵的行数时，两个矩阵才能相乘，即对于矩阵$A_{j\times k}$和$B_{m\times n}$，只有当$k=m$时，两矩阵才可以相乘。方法：用左边矩阵的第一行分别乘以右边矩阵的每一列，得到乘积矩阵的第一行，依次进行下去得到乘积矩阵的所有行。因此，\ast \ast 乘积矩阵的行数等于左边矩阵的行数，列数等于右边矩阵的列数\ast \ast ，即$A_{i\times j}B_{j\times k}=(AB)_{i\times k}$。
 
 注：
 1. 矩阵乘法满足结合律、分配律：$BA-B=B(A-E)$
@@ -301,16 +301,16 @@ $\begin{vmatrix}1&2&3\\\\1&1&0\\\\0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\\
 
 #### 2.4.2 方阵的伴随矩阵
 
-定义：按行求矩阵每个元素的代数余子式后按列放置形成伴随矩阵。对于$n$阶方阵$A$，其行列式$\vert A\vert$中元素$a_{ij}$的代数余子式为$A_{ij}$，则$A$的伴随矩阵$A^*$定义为$$A^*=\begin{pmatrix}A_{11}&A_{21}&\cdots&A_{n1}\\\\A_{12}&A_{22}&\cdots&A_{n2}\\\\\vdots&\vdots&\ddots&\vdots\\\\A_{1n}&A_{2n}&\cdots&A_{nn}\end{pmatrix}$$
+定义：按行求矩阵每个元素的代数余子式后按列放置形成伴随矩阵。对于$n$阶方阵$A$，其行列式$\vert A\vert$中元素$a_{ij}$的代数余子式为$A_{ij}$，则$A$的伴随矩阵$A^\ast $定义为$$A^\ast =\begin{pmatrix}A_{11}&A_{21}&\cdots&A_{n1}\\\\A_{12}&A_{22}&\cdots&A_{n2}\\\\\vdots&\vdots&\ddots&\vdots\\\\A_{1n}&A_{2n}&\cdots&A_{nn}\end{pmatrix}$$
 
 性质：
-1. $AA^*=A^*A=\vert A\vert E$
-2. $E^*=\vert E\vert E^{-1}=1$
-3. 若$A$为$n$阶方阵，则$\vert A^*\vert =\vert A\vert ^{n-1}$
-4. $(A^\top)^*=(A^*)^\top$。即转置和伴随运算顺序可交换
-5. $A^*B^*=(BA)^*$
-6. 若$A$为$n$阶方阵，$k$为常数，则$(kA)^*=k^{n-1}A^*$。提出来$k$是$n-1$次是因为余子式是$n-1$阶行列式
-7. 对于二阶方阵$A=\begin{pmatrix}a&b\\\\c&d\end{pmatrix}$，$A^*=\begin{pmatrix}d&-b\\\\-c&a\end{pmatrix}$，即主对角线上的元素交换位置，副对角线上的元素变为相反数。
+1. $AA^\ast =A^\ast A=\vert A\vert E$
+2. $E^\ast =\vert E\vert E^{-1}=1$
+3. 若$A$为$n$阶方阵，则$\vert A^\ast \vert =\vert A\vert ^{n-1}$
+4. $(A^\top)^\ast =(A^\ast )^\top$。即转置和伴随运算顺序可交换
+5. $A^\ast B^\ast =(BA)^\ast $
+6. 若$A$为$n$阶方阵，$k$为常数，则$(kA)^\ast =k^{n-1}A^\ast $。提出来$k$是$n-1$次是因为余子式是$n-1$阶行列式
+7. 对于二阶方阵$A=\begin{pmatrix}a&b\\\\c&d\end{pmatrix}$，$A^\ast =\begin{pmatrix}d&-b\\\\-c&a\end{pmatrix}$，即主对角线上的元素交换位置，副对角线上的元素变为相反数。
 
 ### 2.4.3 方阵的逆矩阵
 
@@ -320,7 +320,7 @@ $\begin{vmatrix}1&2&3\\\\1&1&0\\\\0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\\
 
 定义：对于$n$阶方阵$A$，若$\vert A\vert \neq 0$，则称$A$是非奇异矩阵；若$\vert A\vert =0$，则称$A$是奇异矩阵。
 
-定理：方阵可逆的充要条件是该方阵为非奇异矩阵（$\vert A\vert \neq 0$）。当$A$可逆时，$$A^{-1}=\frac{A^*}{\vert A\vert }$$，该求逆矩阵方法被称为伴随矩阵法。
+定理：方阵可逆的充要条件是该方阵为非奇异矩阵（$\vert A\vert \neq 0$）。当$A$可逆时，$$A^{-1}=\frac{A^\ast }{\vert A\vert }$$，该求逆矩阵方法被称为伴随矩阵法。
 
 推论1：对角形矩阵$A=\begin{pmatrix}a_1&0&\cdots&0\\\\0&a_2&\cdots&0\\\\\vdots&\vdots&\ddots&\vdots\\\\0&0&\cdots&a_n\end{pmatrix}$可逆的充要条件是$a_1,a_2,\cdots,a_n$均不为0。当对角形矩阵$A$可逆时，有$$A^{-1}=\begin{pmatrix}\frac{1}{a_1}&0&\cdots&0\\\\0&\frac{1}{a_2}&\cdots&0\\\\\vdots&\vdots&\ddots&\vdots\\\\0&0&\cdots&\frac{1}{a_n}\end{pmatrix}$$
 推论2（定义的推广）：对于$n$阶方阵$A$，若存在$n$阶方阵$B$，使得$AB=E$或$BA=E$，则$A$可逆，且$A^{-1}=B$。
@@ -329,7 +329,7 @@ $\begin{vmatrix}1&2&3\\\\1&1&0\\\\0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\\
 1. 若方阵$A$可逆，则$A^{-1}$也可逆，且$(A^{-1})^{-1}=A$。证明：$A^{-1}A=E$
 2. 若方阵$A$可逆，则$A^\top$也可逆，且$(A^\top)^{-1}=(A^{-1})^\top$。即转置和逆运算的顺序可交换。证明：$A^\top(A^{-1})^\top=(A^{-1}A)^\top=E^\top=E$
 3. 若方阵$A$可逆，则对于非零常数$k$，$kA$也可逆，且$(kA)^{-1}=\frac{1}{k}A^{-1}$。证明：$kA\frac{1}{k}A^{-1}=AA^{-1}=E$
-4. 若方阵$A$可逆，则$A^*$也可逆，且$(A^*)^{-1}=(A^{-1})^*=\frac{A}{\vert A\vert }$。证明：$A^*\frac{A}{\vert A\vert }=\vert A\vert A^{-1}\frac{A}{\vert A\vert }=A^{-1}A=E$；$A^*(A^{-1})^*=A^*\vert A^{-1}\vert (A^{-1})^{-1}=\vert A^{-1}\vert A^*A=\vert A^{-1}\vert \vert A\vert E=\vert A^{-1}A\vert E=E$
+4. 若方阵$A$可逆，则$A^\ast $也可逆，且$(A^\ast )^{-1}=(A^{-1})^\ast =\frac{A}{\vert A\vert }$。证明：$A^\ast \frac{A}{\vert A\vert }=\vert A\vert A^{-1}\frac{A}{\vert A\vert }=A^{-1}A=E$；$A^\ast (A^{-1})^\ast =A^\ast \vert A^{-1}\vert (A^{-1})^{-1}=\vert A^{-1}\vert A^\ast A=\vert A^{-1}\vert \vert A\vert E=\vert A^{-1}A\vert E=E$
 5. 若$A,B$为同阶可逆方阵，则$AB$也可逆，且$(AB)^{-1}=B^{-1}A^{-1}$。证明：$ABB^{-1}A^{-1}=AEA^{-1}=AA^{-1}=E$
 6. 若方阵$A$可逆，则对于正整数$m$，$A^m$也可逆，且$(A^m)^{-1}=(A^{-1})^m$。证明：由于可逆方阵与其逆矩阵可交换，有$A^m(A^{-1})^m=(AA^{-1})^m=E^m=E$
 7. 若方阵$A$可逆，则$\vert A^{-1}\vert =\frac{1}{\vert A\vert }$。证明：$\vert A^{-1}\vert \vert A\vert =\vert A^{-1}A\vert =\vert E\vert =1$
@@ -341,7 +341,7 @@ $\begin{vmatrix}1&2&3\\\\1&1&0\\\\0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\\
 
 #### 2.4.4  总结
 
-1. $(kA)^{-1}=\frac{1}{k}A^{-1}$，$(kA)^*=k^{n-1}A^*$，$\vert kA\vert =k^n\vert A\vert$
+1. $(kA)^{-1}=\frac{1}{k}A^{-1}$，$(kA)^\ast =k^{n-1}A^\ast $，$\vert kA\vert =k^n\vert A\vert$
 2. 转置、伴随和逆运算的顺序可任意交换
 3. $(AB)^{-1}=B^{-1}A^{-1}$、$(AB)^\top=B^\top A^\top$
 
@@ -371,7 +371,7 @@ $\begin{vmatrix}1&2&3\\\\1&1&0\\\\0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\\
 初等矩阵：由单位矩阵经过一次初等变换所得到的矩阵。初等矩阵有三种类型：
 1. 交换单位矩阵的第$i$、$j$行（列）得到初等矩阵$E(ij)$。交换行或列得到的初等矩阵相同。
 2. 用非零数$k$乘以单位矩阵的第$i$行（列）得到初等矩阵$E(i(k))$。行/列结果相同。
-3. 把单位矩阵的第$j$行的$l$倍加到第$i$行得到初等矩阵$E(ij(l))$。**行/列结果不同**。
+3. 把单位矩阵的第$j$行的$l$倍加到第$i$行得到初等矩阵$E(ij(l))$。\ast \ast 行/列结果不同\ast \ast 。
 
 性质：
 1. 初等矩阵的行列式都不为0，因此也均可逆，且第一种的行列式值为-1，第二种为$k$，第三种为1；
@@ -392,9 +392,9 @@ $\begin{vmatrix}1&2&3\\\\1&1&0\\\\0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\\
 
 定理：方阵$A$可逆的充要条件是$A$可以表示为有限个初等矩阵的乘积。由上述定理和推论可知：若$A$可逆，则存在初等矩阵$P_1,P_2,\cdots,P_\zeta$与$Q_1,Q_2,\cdots,Q_t$，使得$P_\zeta P_2P_1AQ_1Q_2\cdots Q_t=E$，进而可得$A=P_1^{-1} P_2^{-1}\cdots P_\zeta^{-1}Q_t^{-1}\cdots Q_2^{-1}Q_1^{-1}$。由于初等矩阵的逆矩阵仍为初等矩阵，所以定理成立。
 
-初等变换法求逆矩阵：（1）将方阵$A$和同阶单位矩阵连接起来，形成$n\times2n$的增广矩阵$(A\vdots E)$；（2）对增广矩阵进行初等**行变换**，尝试将$A$变为单位矩阵；（3）若变换的过程中左边矩阵$A'$出现了全零行，则说明$A$不可逆（因为$A$与$A'$等价，由矩阵等价的第二个定义可得$PAQ=A'$，进而可得$\vert P\vert \vert A\vert \vert Q\vert =\vert A'\vert$，由于$\vert A'\vert =0$，所以$\vert A\vert =0$）；若成功将$A$变为单位矩阵，则$A$可逆，$A$的逆矩阵为变换后的增广矩阵右侧的矩阵。
+初等变换法求逆矩阵：（1）将方阵$A$和同阶单位矩阵连接起来，形成$n\times2n$的增广矩阵$(A\vdots E)$；（2）对增广矩阵进行初等\ast \ast 行变换\ast \ast ，尝试将$A$变为单位矩阵；（3）若变换的过程中左边矩阵$A'$出现了全零行，则说明$A$不可逆（因为$A$与$A'$等价，由矩阵等价的第二个定义可得$PAQ=A'$，进而可得$\vert P\vert \vert A\vert \vert Q\vert =\vert A'\vert$，由于$\vert A'\vert =0$，所以$\vert A\vert =0$）；若成功将$A$变为单位矩阵，则$A$可逆，$A$的逆矩阵为变换后的增广矩阵右侧的矩阵。
 
-解释：若方阵$A$可逆，则$A^{-1}$也可逆，表示为$A^{-1}=P_1P_2\cdots P_\zeta$，即$P_1P_2\cdots P_\zeta E=A^{-1}$。由$A^{-1}A=E$可得$P_1P_2\cdots P_\zeta A=E$。因此，将$A$变为单位矩阵的若干次初等**行变换**会将单位矩阵变为$A^{-1}$。因此只能进行初等行变换。
+解释：若方阵$A$可逆，则$A^{-1}$也可逆，表示为$A^{-1}=P_1P_2\cdots P_\zeta$，即$P_1P_2\cdots P_\zeta E=A^{-1}$。由$A^{-1}A=E$可得$P_1P_2\cdots P_\zeta A=E$。因此，将$A$变为单位矩阵的若干次初等\ast \ast 行变换\ast \ast 会将单位矩阵变为$A^{-1}$。因此只能进行初等行变换。
 
 例：判断矩阵$A=\begin{pmatrix}1&1&1\\\\2&1&0\\\\1&-1&0\end{pmatrix}$是否可逆。若可逆，则求其逆矩阵。
 思路：将$A$从左向右按列开始变换为单位矩阵。
@@ -419,7 +419,7 @@ $$\begin{align}
 
 同型矩阵按照相同方法分块得到的两个分块矩阵才可进行加减运算。
 
-分块矩阵乘法：方法同矩阵乘法（将子块视为元素），**注意**第一个分块矩阵的列分块方式要与第二个分块矩阵的行分块方式相同（已蕴含第一个分块矩阵列数与第二个行数相等的前提）。
+分块矩阵乘法：方法同矩阵乘法（将子块视为元素），\ast \ast 注意\ast \ast 第一个分块矩阵的列分块方式要与第二个分块矩阵的行分块方式相同（已蕴含第一个分块矩阵列数与第二个行数相等的前提）。
 
 注：$A$与$\begin{pmatrix}\alpha_1\\\\\alpha_2\\\\\vdots\\\\\alpha_t\end{pmatrix}$、$\begin{pmatrix}\beta_1&\beta_2&\cdots&\beta_\zeta\end{pmatrix}$与$B$无法相乘（$A$只有一列，$\begin{pmatrix}\alpha_1\\\\\alpha_2\\\\\vdots\\\\\alpha_t\end{pmatrix}$有$t$行）。
 
@@ -457,7 +457,7 @@ $$\begin{align}
 5. 对于矩阵$A_{m\times n}$和$B_{n\times s}$，有$r(A)+r(B)-n\leq r(AB)\leq min(r(A),r(B))$，当$AB=O$时，有$r(A)+r(B)\leq n$；
 6. $r(A^\top A)=r(AA^\top)=r(A)=r(A^\top)$；
 7. 对于可逆方阵$P$和$Q$和任意矩阵$A$，有$r(A)=r(PA)=r(AQ)=r(PAQ)$；
-8. 对于$n(n\geq 2)$阶方阵$A$，其伴随矩阵的秩$r(A^*)=\begin{cases}n,r(A)=n\\\\1,r(A)=n-1\\\\0,r(A)<n-1\end{cases}$。证明：（1）当$r(A)=n$时，$\vert A\vert \neq0$，因此$\vert A^*\vert =\vert A^{n-1}\vert \neq0$，进而可得$A^*$为满秩；（2）当$r(A)=n-1$时，$A$有非0的$n-1$阶子式，进而有非0的代数余子式，因此$A^*\neq O$，$r(A^*)\geq1$；由$\vert A\vert =0$可得$AA^*=\vert A\vert E=O$，由结论5可得$r(A)+r(A^*)\leq n$，因此$r(A^*)\leq 1$。由两个条件可得$r(A^*)=1$；（3）当$r(A)<n-1$时，$A^*=O$，因此$r(A^*)=0$。
+8. 对于$n(n\geq 2)$阶方阵$A$，其伴随矩阵的秩$r(A^\ast )=\begin{cases}n,r(A)=n\\\\1,r(A)=n-1\\\\0,r(A)<n-1\end{cases}$。证明：（1）当$r(A)=n$时，$\vert A\vert \neq0$，因此$\vert A^\ast \vert =\vert A^{n-1}\vert \neq0$，进而可得$A^\ast $为满秩；（2）当$r(A)=n-1$时，$A$有非0的$n-1$阶子式，进而有非0的代数余子式，因此$A^\ast \neq O$，$r(A^\ast )\geq1$；由$\vert A\vert =0$可得$AA^\ast =\vert A\vert E=O$，由结论5可得$r(A)+r(A^\ast )\leq n$，因此$r(A^\ast )\leq 1$。由两个条件可得$r(A^\ast )=1$；（3）当$r(A)<n-1$时，$A^\ast =O$，因此$r(A^\ast )=0$。
 
 矩阵秩的求法：
 1. 定义法
@@ -592,11 +592,11 @@ $k\alpha=0\Leftrightarrow k=0$或$\alpha=\mathbf{0}$
 
 将系数矩阵按列分块，即$A=(\alpha_1,\alpha_2,\cdots,\alpha_n)$，将方程组的解组成列向量$x=\begin{bmatrix}x_1\\\\x_2\\\\\vdots\\\\x_n\end{bmatrix}$，将常数项组成列向量$b=\begin{bmatrix}b_1\\\\b_2\\\\\vdots\\\\b_n\end{bmatrix}$，则上述线性方程组可以表示为向量形式：$$x_1\alpha_1,x_2\alpha_2,\cdots,x_n\alpha_n=Ax=b$$，其导出组的向量形式为：$$x_1\alpha_1,x_2\alpha_2,\cdots,x_n\alpha_n=Ax=\mathbf{0}$$。
 
-高斯消元法：通过**初等行变换**将增广矩阵化为行简化阶梯形矩阵，再还原为方程组形式，从最后一行开始逐步求出未知数的值。
+高斯消元法：通过\ast \ast 初等行变换\ast \ast 将增广矩阵化为行简化阶梯形矩阵，再还原为方程组形式，从最后一行开始逐步求出未知数的值。
 
 ### 4.2 线性方程组解的判定
 
-非齐次线性方程组：先通过**初等行变换**将增广矩阵化为阶梯形矩阵，然后判断系数矩阵和增广矩阵的秩的关系：
+非齐次线性方程组：先通过\ast \ast 初等行变换\ast \ast 将增广矩阵化为阶梯形矩阵，然后判断系数矩阵和增广矩阵的秩的关系：
 若$r(A)=r(\overline{A})=n$，方程组有唯一解，$n$为$A$的列数；
 若$r(A)=r(\overline{A})<n$，方程组有无穷多解；
 若$r(A)\neq r(\overline{A})$，方程组无解。
@@ -607,9 +607,9 @@ $k\alpha=0\Leftrightarrow k=0$或$\alpha=\mathbf{0}$
 
 推论：对于齐次线性方程组，若方程个数小于未知数个数，即$m<n$，则方程组必有非零解。$r(A)\leq min(m,n)=m<n$。
 
-推论：若方程个数等于未知数个数，即$A$**为方阵**
+推论：若方程个数等于未知数个数，即$A$\ast \ast 为方阵\ast \ast 
 对于齐次线性方程组，则方程组有非零解$\Leftrightarrow\vert A\vert =0\Leftrightarrow A$不可逆；方程组只有零解$\Leftrightarrow\vert A\vert \neq0\Leftrightarrow A$可逆；
-对于非齐次线性方程组，方程组无解或有无穷多解$\Leftrightarrow\vert A\vert =0\Leftrightarrow A$不可逆；**方程组有唯一解$\Leftrightarrow\vert A\vert \neq0\Leftrightarrow A$可逆。**
+对于非齐次线性方程组，方程组无解或有无穷多解$\Leftrightarrow\vert A\vert =0\Leftrightarrow A$不可逆；\ast \ast 方程组有唯一解$\Leftrightarrow\vert A\vert \neq0\Leftrightarrow A$可逆。\ast \ast 
 
 ### 4.3 线性方程组解的性质与结构
 
@@ -621,7 +621,7 @@ $k\alpha=0\Leftrightarrow k=0$或$\alpha=\mathbf{0}$
 非齐次线性方程组：
 1. 设$\eta_1,\eta_2$/ˈiːtə/是非齐次线性方程组的两个解，则$\eta_1-\eta_2$为对应导出组的解。
 2. 设$\eta$是非齐次线性方程组的解，$\xi$是其导出组的任一解，则$\eta+\xi$是非齐次线性方程组的解。
-3. 若$\eta^*$为非齐次线性方程组的解，则方程组的任一解可表示为$\xi+\eta^*$，其中$\xi$是对应导出组的解。
+3. 若$\eta^\ast $为非齐次线性方程组的解，则方程组的任一解可表示为$\xi+\eta^\ast $，其中$\xi$是对应导出组的解。
 
 齐次线性方程组的基础解系：设$\xi_1,\xi_2,\cdots,\xi_n$是齐次线性方程组的解向量，若$\xi_1,\xi_2,\cdots,\xi_n$是齐次线性方程组的解向量组的一个极大线性无关组，那么就称$\xi_1,\xi_2,\cdots,\xi_n$是齐次线性方程组的一个基础解系。
 
@@ -649,7 +649,7 @@ $k\alpha=0\Leftrightarrow k=0$或$\alpha=\mathbf{0}$
 
 ### 5.1 特征值与特征向量的概念
 
-定义：设$A$为$n$阶**方阵**，$\alpha$为$n$维**非零**列向量，$\lambda$为数，若$$A\alpha=\lambda\alpha$$，则称$\lambda$为$A$的特征值，$\alpha$为$A$对应于特征值$\lambda$的特征向量。
+定义：设$A$为$n$阶\ast \ast 方阵\ast \ast ，$\alpha$为$n$维\ast \ast 非零\ast \ast 列向量，$\lambda$为数，若$$A\alpha=\lambda\alpha$$，则称$\lambda$为$A$的特征值，$\alpha$为$A$对应于特征值$\lambda$的特征向量。
 
 性质：
 1. 若$\alpha$是矩阵$A$对应于特征值$\lambda$的特征向量，则$k\alpha(k\neq0)$也是$A$对应于$\lambda$的特征向量。
@@ -683,13 +683,13 @@ $k\alpha=0\Leftrightarrow k=0$或$\alpha=\mathbf{0}$
 性质4：方阵$A$可逆$\Leftrightarrow\vert A\vert \neq0\Leftrightarrow A$所有的特征值都不等于0；
 方阵$A$不可逆$\Leftrightarrow\vert A\vert =0\Leftrightarrow A$至少有一个特征值为0。
 
-性质5：矩阵对应于**不同**特征值的所有特征向量所形成的向量组线性无关。
+性质5：矩阵对应于\ast \ast 不同\ast \ast 特征值的所有特征向量所形成的向量组线性无关。
 
 性质6：若$\lambda$是矩阵$A$的$k$重特征值，则$A$的对应于$\lambda$的线性无关的特征向量的个数不超过$k$个。当$\lambda$是单特征值时，则$A$的对应于$\lambda$的线性无关的特征向量有且只有1个。
 
 性质7：设$\lambda$是矩阵$A$的特征值，对应的特征向量为$\alpha$，则有
 
-|  矩阵  |   $A^m$    |   $kA$    |   $A+E$    |   $f(A)$    |     $A^2+2A+3E$       |     $A^{-1}$       |              $A^*$                |
+|  矩阵  |   $A^m$    |   $kA$    |   $A+E$    |   $f(A)$    |     $A^2+2A+3E$       |     $A^{-1}$       |              $A^\ast $                |
 | :--: | :---------: | :--------: | :---------: | :----------: | :--------------------: | :-----------------: | :--------------------------------: |
 | 特征值  |$\lambda^m$ |$k\lambda$ |$\lambda+1$ |$f(\lambda)$ |$\lambda^2+2\lambda+3$ |$\frac{1}{\lambda}$ |$\frac{\left\|A\right\|}{\lambda}$ |
 | 特征向量 | $\alpha$   | $\alpha$  | $\alpha$   |  $\alpha$   |       $\alpha$        |     $\alpha$       |             $\alpha$              |
@@ -698,7 +698,7 @@ $k\alpha=0\Leftrightarrow k=0$或$\alpha=\mathbf{0}$
 
 推论：若$\lambda$是矩阵$A$的特征值，$f(x)$为一多项式且$f(A)=O$，则$f(\lambda)=0$。矩阵特征值一定属于解得$\lambda$值的集合，但不一定能取到每个解。
 
-**性质8：对于$n$阶方阵$A$，若$r(A)=1$，则$A$的特征值$\lambda_1=tr(A)$，$\lambda_2=\lambda_3=\cdots=\lambda_n=0$。**
+\ast \ast 性质8：对于$n$阶方阵$A$，若$r(A)=1$，则$A$的特征值$\lambda_1=tr(A)$，$\lambda_2=\lambda_3=\cdots=\lambda_n=0$。\ast \ast 
 
 ### 5.4 相似矩阵的概念与性质
 
@@ -708,12 +708,12 @@ $k\alpha=0\Leftrightarrow k=0$或$\alpha=\mathbf{0}$
 
 性质：
 1. 相似关系是一种等价关系，即若$A\sim B$，则$A\cong B$。（等价：存在可逆矩阵$P$和$Q$，使得$PAQ=B$）因此，相似关系也具有等价关系的三个性质，即反身性、对称性和传递性。但两个等价的矩阵不一定相似。
-2. **若$A\sim B$，则$r(A)=r(B)$**
-3. **若$A\sim B$，则$A$与$B$有相同的特征值**
+2. \ast \ast 若$A\sim B$，则$r(A)=r(B)$\ast \ast 
+3. \ast \ast 若$A\sim B$，则$A$与$B$有相同的特征值\ast \ast 
 4. 若$A\sim$对角形矩阵$B$，则$A$的特征值就是$B$主对角线上的元素。
-5. **若$A\sim B$，则$\vert A\vert =\vert B\vert$、$tr(A)=tr(B)$**
+5. \ast \ast 若$A\sim B$，则$\vert A\vert =\vert B\vert$、$tr(A)=tr(B)$\ast \ast 
 6. 若$A\sim B$，则两个矩阵均可逆或均不可逆
-7. 若$A\sim B$，则当两个矩阵均可逆时，有（1）$A^{-1}\sim B^{-1}$（2）$A^*\sim B^*$
+7. 若$A\sim B$，则当两个矩阵均可逆时，有（1）$A^{-1}\sim B^{-1}$（2）$A^\ast \sim B^\ast $
 8. 若$A\sim B$，则$A^m\sim B^m$，其中$m$为正整数。
 9. 若$A\sim B$，则$A^\top\sim B^\top$
 10. 若$A\sim B$，则$kA\sim kB$，$A+kE\sim B+kE$，$f(A)\sim f(B)$，其中$k$为常数，$f(x)$是关于$x$的多项式
@@ -770,7 +770,7 @@ $\Leftrightarrow$对于$A$的任一$s$重特征值$\lambda$，齐次线性方程
 2. 若$A$为正交矩阵，则$\vert A\vert =\pm1$
 3. 若$A$为正交矩阵，则$A$可逆，且$A^{-1}=A^\top$
 4. 若$\lambda$是正交矩阵$A$的特征值，则$\frac{1}{\lambda}$也是其特征值。
-5. 若$A$为正交矩阵，则$A^\top,A^{-1},A^*$也是正交矩阵。
+5. 若$A$为正交矩阵，则$A^\top,A^{-1},A^\ast $也是正交矩阵。
 6. 若$A$为正交矩阵，则$AB$也是正交矩阵。
 7. 保内积型：若$A$为正交矩阵，则$(A\alpha,A\beta)=(\alpha,\beta)$
 8. 保长度性：若$A$为正交矩阵，则$\vert \vert A\alpha\vert \vert =\vert \vert \alpha\vert \vert$
@@ -800,7 +800,7 @@ $\Leftrightarrow$对于$A$的任一$s$重特征值$\lambda$，齐次线性方程
 
 注意：二次型不含常数项，$a_{ij}x_ix_j$也为二次项，称为交叉项，$f(x_1,x_2)=x_1^2$为二元二次型。
 
-记**实对称矩阵**$$A=\begin{pmatrix}
+记\ast \ast 实对称矩阵\ast \ast $$A=\begin{pmatrix}
 a_{11} & a_{12} & \cdots & a_{1n} \\\\
 a_{21} & a_{22} & \cdots & a_{2n} \\\\
 \vdots & \vdots & \ddots & \vdots \\\\
@@ -814,7 +814,7 @@ $A$的写法：先找平方项的系数，写在主对角线上，然后每个�
 
 将非对称的$A$转换为对称矩阵：主对角线不变，两侧对称的元素相加后除以二再放回。
 
-**二次型的秩**：实对称矩阵$A$的秩。
+\ast \ast 二次型的秩\ast \ast ：实对称矩阵$A$的秩。
 
 二次型的标准形：若二次型只含平方项，不含交叉项，即$$f(x_1,x_2,\cdots,x_n)=d_1x_1^2+d_2x_2^2+\cdots+d_nx_n^2$$，则称为二次型的一个标准形，系数$d_1,d_2,\cdots,d_n$为任意实数。
 
@@ -883,9 +883,9 @@ f(x_1,x_2,x_3)&=x_1^2-2x_1x_2+2x_1x_3-3x_2^2-6x_2x_3+4x_3^2\\\\
 
 ### 6.3 有定性
 
-定义：若对于任意非零列向量$x=(x_1,x_2,\cdots,x_n)^\top$和**对称矩阵**$A$，恒有$f(x)=x^\top Ax>0$（或$<0$），则称该二次型为正（或负）定二次型、对称矩阵$A$为正（或负）定矩阵。
+定义：若对于任意非零列向量$x=(x_1,x_2,\cdots,x_n)^\top$和\ast \ast 对称矩阵\ast \ast $A$，恒有$f(x)=x^\top Ax>0$（或$<0$），则称该二次型为正（或负）定二次型、对称矩阵$A$为正（或负）定矩阵。
 
-定义：若对于任意列向量$x=(x_1,x_2,\cdots,x_n)^\top$和**对称矩阵**$A$，恒有$f(x)=x^\top Ax\geq0$（或$\leq0$），且存在非零列向量$x_0$，使得$f(x_0)=x_0^\top Ax_0=0$，则称该二次型为半正（或负）定二次型、对称矩阵$A$为半正（或负）定矩阵。
+定义：若对于任意列向量$x=(x_1,x_2,\cdots,x_n)^\top$和\ast \ast 对称矩阵\ast \ast $A$，恒有$f(x)=x^\top Ax\geq0$（或$\leq0$），且存在非零列向量$x_0$，使得$f(x_0)=x_0^\top Ax_0=0$，则称该二次型为半正（或负）定二次型、对称矩阵$A$为半正（或负）定矩阵。
 
 推论：对称矩阵$A$正定的充要条件是主对角线上的所有元素都大于零。特别地，单位矩阵是正定矩阵。
 
@@ -924,7 +924,7 @@ a_{k1} & a_{k2} & \cdots & a_{kk}
 3. 若$A$为正定矩阵，则$A$为可逆矩阵
 4. 若$A$为正定矩阵，则$\vert A\vert >0$
 
-性质：若$A$为正定矩阵，则$A^\top,A^{-1},A^*,kA(k>0),A^k(k\in Z^+)$均为正定矩阵。
+性质：若$A$为正定矩阵，则$A^\top,A^{-1},A^\ast ,kA(k>0),A^k(k\in Z^+)$均为正定矩阵。
 
 性质：若$A$为正定矩阵，$B$为同阶（半）正定矩阵，则$A+B$也是正定矩阵。
 
@@ -969,7 +969,7 @@ a_{k1} & a_{k2} & \cdots & a_{kk}
 （1）若$\alpha_1,\alpha_2,\cdots,\alpha_s$线性无关，则$\alpha_1,\alpha_2,\cdots,\alpha_s$是$L$的一组基，维数为$s$；
 （2）若$\alpha_1,\alpha_2,\cdots,\alpha_s$线性相关，则$\alpha_1,\alpha_2,\cdots,\alpha_s$的一个极大线性无关组$\alpha_1,\alpha_2,\cdots,\alpha_r$是$L$的一组基，$\alpha_1,\alpha_2,\cdots,\alpha_s$的秩$r$是$L$的维数，$L$还可以表示为$$\{x\vert x=\lambda_1\alpha_1+\lambda_2\alpha_2+\cdots+\lambda_r\alpha_r\vert \lambda_1,\lambda_2,\cdots,\lambda_r\in R\}$$，即由基$\alpha_1,\alpha_2,\cdots,\alpha_r$所生成的向量空间。
 
-对于$n$元齐次线性方程组$Ax=\mathbf{0}$的解空间$S=\{x\vert Ax=\mathbf{0}\}$，$Ax=\mathbf{0}$的基础解系是**解空间**$S$的一组基，维数$\dim S=n-r(A)$。
+对于$n$元齐次线性方程组$Ax=\mathbf{0}$的解空间$S=\{x\vert Ax=\mathbf{0}\}$，$Ax=\mathbf{0}$的基础解系是\ast \ast 解空间\ast \ast $S$的一组基，维数$\dim S=n-r(A)$。
 
 例：求$R^4$中由向量$\alpha_1=(1,2,-1,-1)^\top$，$\alpha_2=(2,5,2,-1)^\top$，$\alpha_3=(3,5,-7,-4)^\top$，$\alpha_4=(-1,6,17,9)^\top$生成的子空间的一个基和维数。
 
