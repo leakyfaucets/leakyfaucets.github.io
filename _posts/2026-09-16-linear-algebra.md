@@ -169,6 +169,7 @@ $$
 行列式按一行/列展开：$n$阶行列式$D=\vert a_{ij}\vert$等于它的任意一行/列的各元素与其对应的代数余子式乘积的和，即$$D=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots+a_{in}A_{in}$$（按第i行展开）。为了计算简便，一般优先按0多的行/列展开。如果没有，可以利用上一部分的性质5构造尽可能多的0。
 
 **异乘变零定理**：$n$阶行列式$D=\vert a_{ij}\vert$的某一行/列的所有元素与另一行/列中对应元素的代数余子式乘积的和等于零，即$$a_{i1}A_{k1}+a_{i2}A_{k2}+\cdots+a_{in}A_{kn}=0,i\neq k$$
+
 例题：设行列式$D=\begin{vmatrix}3&0&4&0\\\\3&2&2&2\\\\0&-7&0&0\\\\5&3&-2&2\end{vmatrix}$，求：（1）$A_{41}+A_{42}+A_{43}+A_{44}$；（2）$M_{41}+M_{42}+M_{43}+M_{44}$。
 
 解：（1）$A_{41}+A_{42}+A_{43}+A_{44}=\begin{vmatrix}3&0&4&0\\\\3&2&2&2\\\\0&-7&0&0\\\\1&1&1&1\end{vmatrix}=(-7)\times(-1)^{3+2}\times\begin{vmatrix}3&4&0\\\\3&2&2\\\\1&1&1\end{vmatrix}=7\times\begin{vmatrix}3&4&0\\\\1&0&0\\\\1&1&1\end{vmatrix}=7\times(-1)^{3}\times\begin{vmatrix}4&0\\\\1&1\end{vmatrix}=-28$
@@ -301,6 +302,7 @@ $\begin{vmatrix}1&2&3\\\\1&1&0\\\\0&0&5\end{vmatrix}\cdot\begin{vmatrix}0&1&1\\\
 #### 2.4.2 方阵的伴随矩阵
 
 定义：按行求矩阵每个元素的代数余子式后按列放置形成伴随矩阵。对于$n$阶方阵$A$，其行列式$\vert A\vert$中元素$a_{ij}$的代数余子式为$A_{ij}$，则$A$的伴随矩阵$A^*$定义为$$A^*=\begin{pmatrix}A_{11}&A_{21}&\cdots&A_{n1}\\\\A_{12}&A_{22}&\cdots&A_{n2}\\\\\vdots&\vdots&\ddots&\vdots\\\\A_{1n}&A_{2n}&\cdots&A_{nn}\end{pmatrix}$$
+
 性质：
 1.$AA^*=A^*A=\vert A\vert E$
 2.$E^*=\vert E\vert E^{-1}=1$
