@@ -1,14 +1,3 @@
----
-layout: post
-title: "Linear Algebra"
-categories: [Mathematics]
-author:
-- Frank Zhang
-comments: true
----
-
-本文是作者在观看[宋浩老师《线性代数》3.0视频](https://www.bilibili.com/video/BV1d7wAzsE8V)时的笔记，使用markdown格式，易于编辑。markdown文件[点此下载](https://leakyfaucets.github.io/assets/files/2026-09-16-linear-algebra.md)。
-
 ## 第一章 行列式
 
 ### 1.1 二阶和三阶行列式
