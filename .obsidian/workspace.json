@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d06ed272bbf19c58",
+        "id": "2ab76e82671dda87",
         "type": "tabs",
         "children": [
           {
-            "id": "ef34454617723a9a",
+            "id": "cb3e667527e835e7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -189,8 +189,12 @@
       "bases:新建数据库": false
     }
   },
-  "active": "ef34454617723a9a",
+  "active": "cb3e667527e835e7",
   "lastOpenFiles": [
+    "_posts/2026-09-16-linear-algebra.md",
+    "scripts/2026-10-28-deep-learning.ipynb",
+    "scripts/2026-10-28-deep-learning.md",
+    "scripts/Word2Vec.md",
     "scripts/2026-09-15-linguistics.md",
     "about.md",
     "README.md",
