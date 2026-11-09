@@ -1,4 +1,14 @@
-{% include mathjax.html %}
+<script>
+MathJax = {
+  tex: {
+    inlineMath: {'[+]': [['$', '$']]}
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@12/dist/mermaid.esm.min.mjs';
 </script>
