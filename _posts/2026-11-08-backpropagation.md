@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "仿射层和批标准化层中的向量函数求导"
+title: "仿射层中的向量函数求导"
 categories: [Mathematics]
 author:
 - Frank Zhang
 comments: false
 ---
 
-仿射层（Affine Layer）与批标准化层（Batch Normalization Layer）是神经网络中常见的两种层，但对于其反向传播中向量函数的求导，高数似乎没有过多涉及。本文将用笔者有限的知识尽量讲解求导过程，希望能帮助读者理解向量函数如何求导。本文参考了[矩阵求导的本质与分子布局、分母布局的本质（矩阵求导——本质篇）](https://zhuanlan.zhihu.com/p/263777564)和[Understanding the backward pass through Batch Normalization Layer](https://kratzert.github.io/2016/02/12/understanding-the-gradient-flow-through-the-batch-normalization-layer.html)。
+仿射层（Affine Layer）是神经网络中最常用的层，但对于其反向传播中给梯度乘以权重转置的原因，课本没有过多讲解。本质上这个问题涉及向量函数求导。因此，本文将说明向量函数如何求导，同时对批标准化层（Batch Normalization Layer）中求和运算的求导也进行了说明，希望能够帮助读者加深对反向传播中梯度计算的理解。本文参考了[矩阵求导的本质与分子布局、分母布局的本质（矩阵求导——本质篇）](https://zhuanlan.zhihu.com/p/263777564)和[Understanding the backward pass through Batch Normalization Layer](https://kratzert.github.io/2016/02/12/understanding-the-gradient-flow-through-the-batch-normalization-layer.html)，在这里特别感谢。
 
 ## 概念
 
