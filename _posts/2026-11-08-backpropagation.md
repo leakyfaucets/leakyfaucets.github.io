@@ -16,17 +16,17 @@ comments: true
 ## 正向传播的计算图
 
 对于输入$\boldsymbol{x}=(x_1,x_2,\cdots,x_n)$，仿射层的输出$$\boldsymbol{y}=\boldsymbol{x}\cdot\boldsymbol{W}+\boldsymbol{b}$$，其中$\boldsymbol{W}_{n\times m}$为权重，$\boldsymbol{b}=(b_1,b_2,\cdots,b_m)$为偏置，用计算图可表示为
-```mermaid
+<div class="mermaid">
 flowchart LR
     A(("$$\boldsymbol{x}$$")) --> C(("$$\cdot$$"))
     B(("$$\boldsymbol{W}$$")) --> C
     D(("$$\boldsymbol{b}$$")) --> E
     C --> E((+))
     E --> F(("$$\boldsymbol{y}$$"))
-```
+</div>
 
 批标准化层的输出$$\boldsymbol{y}=\gamma\frac{\boldsymbol{x}-\boldsymbol{\mu}}{\sqrt{\sigma^2+\varepsilon}}+\boldsymbol{\beta}$$，其中$\boldsymbol{\mu}=\mu\cdot\boldsymbol{1}$，$\mu=\frac{1}{n}\sum_{i=1}^{n}x_i$，$\sigma^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\mu)^2$，标量$\gamma$和向量$\boldsymbol{\beta}$为参数，标量$\varepsilon$为微小值，防止除0。用计算图可表示为
-```mermaid
+<div class="mermaid">
 flowchart LR
     A(("$$\boldsymbol{x}$$")) --> B(("$$\frac{1}{n}\sum_{i=1}^{n}x_i$$"))
     A --> C(("-"))
@@ -42,21 +42,21 @@ flowchart LR
     K(("$$\boldsymbol{\beta}$$")) --> L((+))
     J --> L
     L --> M(("$$\boldsymbol{y}$$"))
-```
+</div>
 
 ## 反向传播的计算图
 
 ### 仿射层
 
 对于仿射层，反向传播的计算图为
-```mermaid
+<div class="mermaid">
 flowchart RL
     F(("$$\boldsymbol{y}$$")) -->|"$$\frac{\partial L}{\partial\boldsymbol{y}}$$"| E((+))
     E -->|"$$\frac{\partial L}{\partial\boldsymbol{y}}$$"| D(("$$\boldsymbol{b}$$"))
     E -->|"$$\frac{\partial L}{\partial\boldsymbol{y}}$$"| C(("$$\cdot$$"))
     C -->|"$$\boldsymbol{x}^\top\frac{\partial L}{\partial\boldsymbol{y}}$$"| B(("$$\boldsymbol{W}$$"))
     C -->|"$$\frac{\partial L}{\partial\boldsymbol{y}}\cdot\boldsymbol{W}^\top$$"| A(("$$\boldsymbol{x}$$"))
-```
+</div>
 
 对于加法节点，反向传播中会将上游传来的梯度原封不动地传给下游。因为对于$f(x,y)=x+y$，有$\frac{\partial f(x,y)}{\partial x}=\frac{\partial f(x,y)}{\partial y}=1$，所以$\frac{\partial L}{\partial x}=\frac{\partial L}{\partial f(x,y)}\cdot\frac{\partial f(x,y)}{\partial x}=\frac{\partial L}{\partial f(x,y)}$，$\frac{\partial L}{\partial y}$同理。
 
@@ -69,11 +69,11 @@ flowchart RL
 ### 批标准化层
 
 对于批标准化层，主要的难点在于求和节点，用计算图表示为
-```mermaid
+<div class="mermaid">
 flowchart LR
     A(("$$\boldsymbol{x}$$")) --> B(("$$\frac{1}{n}\sum_{i=1}^{n}x_i$$"))
     B --> C(("$$\boldsymbol{y}$$"))
-```
+</div>
 设标量函数$f(\boldsymbol{x})=\frac{1}{n}\sum_{i=1}^{n}x_i$。求导得$$\frac{\partial f(\boldsymbol{x})}{\partial \boldsymbol{x}}=(\frac{\partial f(\boldsymbol{x})}{\partial x_1},\frac{\partial f(\boldsymbol{x})}{\partial x_2},\cdots,\frac{\partial f(\boldsymbol{x})}{\partial x_n})=(\frac{1}{n},\frac{1}{n},\cdots,\frac{1}{n})=\frac{1}{n}\cdot\boldsymbol{1}$$，因此反向传播时需要将上游传来的梯度乘以$\frac{1}{n}\cdot\boldsymbol{1}$。
 
 ## 总结
