@@ -776,7 +776,7 @@ $\Leftrightarrow$对于$A$的任一$s$重特征值$\lambda$，齐次线性方程
 2. 若$A$为正交矩阵，则$\vert A\vert =\pm1$
 3. 若$A$为正交矩阵，则$A$可逆，且$A^{-1}=A^\top$
 4. 若$\lambda$是正交矩阵$A$的特征值，则$\frac{1}{\lambda}$也是其特征值。
-5. 若$A$为正交矩阵，则$A^\top,A^{-1},A^\ast $也是正交矩阵。
+5. 若$A$为正交矩阵，则$A^\top,A^{-1},A^\ast$也是正交矩阵。
 6. 若$A$为正交矩阵，则$AB$也是正交矩阵。
 7. 保内积型：若$A$为正交矩阵，则$(A\alpha,A\beta)=(\alpha,\beta)$
 8. 保长度性：若$A$为正交矩阵，则$\vert \vert A\alpha\vert \vert =\vert \vert \alpha\vert \vert$
