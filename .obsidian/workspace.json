@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[\"author\"]",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -79,13 +79,11 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "6790cc18d121127e",
@@ -202,7 +200,7 @@
       "bases:新建数据库": false
     }
   },
-  "active": "9b21f7b66606d8e9",
+  "active": "25988040d62007e4",
   "lastOpenFiles": [
     "assets/files/ptb.test.txt",
     "assets/files/ptb.train.txt",
